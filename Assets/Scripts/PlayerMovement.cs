@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    //private //animator //animator;
+    private Animator animator;
     private PlayerInput playerInput;
     private InputAction moveAction;
     private InputAction jumpAction;
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<//animator>();
+        animator = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
 
         moveAction = playerInput.actions["Move"];
@@ -39,8 +39,16 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
         }
         
-        //animator.SetBool("isGrounded", isGrounded);
-        //animator.SetFloat("Speed", Mathf.Abs(moveInput));
+        animator.SetBool("isGrounded", isGrounded);
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+        if(moveInput < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else if(moveInput > 0)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
     }
 
     private void FixedUpdate()
