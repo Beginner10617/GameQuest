@@ -94,7 +94,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Layer 2
+  - name: Head
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -642,7 +642,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 159, y: 4}
     spritePosition: {x: 292, y: 407}
-  - name: Layer 3
+  - name: RightHand
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -1410,7 +1410,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 159, y: 506}
     spritePosition: {x: 290, y: 169}
-  - name: Shape 1 copy
+  - name: Body
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -1851,7 +1851,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 304, y: 13}
-  - name: Shape 1
+  - name: LeftHand
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -2692,7 +2692,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 432}
     spritePosition: {x: 375, y: 122}
-  - name: Shape 2
+  - name: RightLeg
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -3387,7 +3387,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 733}
     spritePosition: {x: 324, y: 8}
-  - name: Layer 7
+  - name: LeftLeg
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -4401,7 +4401,43 @@ ScriptedImporter:
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   mosaicLayers: 1
   characterMode: 1
   documentPivot: {x: 0.5, y: 0}
@@ -4422,8 +4458,8 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Layer 2
-    spriteName: Layer 2
+  - name: Head
+    spriteName: Head
     isGroup: 0
     parentIndex: -1
     spriteID: cf8f8ecb12c494ebcb71bf5eb255bff7
@@ -4432,8 +4468,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Layer 3
-    spriteName: Layer 3
+  - name: RightHand
+    spriteName: RightHand
     isGroup: 0
     parentIndex: -1
     spriteID: 1e6f7a14b96904d719653fc86b58ad66
@@ -4442,8 +4478,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Shape 1 copy
-    spriteName: Shape 1 copy
+  - name: Body
+    spriteName: Body
     isGroup: 0
     parentIndex: -1
     spriteID: 510d7943f6b6e4b59acd82eeb76aa317
@@ -4452,8 +4488,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Shape 2
-    spriteName: Shape 2
+  - name: RightLeg
+    spriteName: RightLeg
     isGroup: 0
     parentIndex: -1
     spriteID: 211d6223a51b448298b3db2b2eb8328b
@@ -4462,8 +4498,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Layer 7
-    spriteName: Layer 7
+  - name: LeftLeg
+    spriteName: LeftLeg
     isGroup: 0
     parentIndex: -1
     spriteID: 010467a50cf244f399e39fcacbf9e9e1
@@ -4472,8 +4508,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Shape 1
-    spriteName: Shape 1
+  - name: LeftHand
+    spriteName: LeftHand
     isGroup: 0
     parentIndex: -1
     spriteID: dff43d6c8eabd438db509a8544324877
@@ -4485,7 +4521,7 @@ ScriptedImporter:
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638773144332932350
   spriteSizeExpandChanged: 0
   generateGOHierarchy: 0
   textureAssetName: 
