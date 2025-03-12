@@ -8,8 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
     private InputAction moveAction;
     private InputAction jumpAction;
+    private bool invokingJump;
 
     public float moveSpeed = 5f;
+
+    public float jumpDelay;
     public float jumpForce = 10f;
     public LayerMask groundLayer;
     public Transform groundCheck;
@@ -39,8 +42,15 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
         }
         
-        animator.SetBool("isGrounded", isGrounded);
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
+        if(invokingJump)
+        {
+            animator.SetBool("isGrounded", false);
+        }
+        else
+        {
+            animator.SetBool("isGrounded", isGrounded);
+        }
         if(moveInput < 0)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
@@ -57,8 +67,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (isJumping)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            isJumping = false;
+            invokingJump = true;
+            Invoke(nameof(Jump), jumpDelay); 
+            isJumping = false;           
         }
+    }
+
+    private void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        invokingJump = false;
     }
 }
