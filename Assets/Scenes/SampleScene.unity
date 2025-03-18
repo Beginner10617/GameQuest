@@ -1076,13 +1076,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpDelay: 0.15
-  jumpForce: 5
+  jumpForce: 8
+  fallMultiplier: 3
+  lowJumpMultiplier: 2.7
+  coyoteTime: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   groundCheck: {fileID: 1964392624}
-  groundCheckRadius: 0.2
+  groundCheckRadius: 0.01
 --- !u!114 &3926116371170628515
 MonoBehaviour:
   m_ObjectHideFlags: 0

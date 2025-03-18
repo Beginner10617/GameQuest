@@ -8,19 +8,21 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput playerInput;
     private InputAction moveAction;
     private InputAction jumpAction;
-    private bool invokingJump;
 
     public float moveSpeed = 5f;
+    public float jumpForce = 14f;  // Increased for a stronger jump
+    public float fallMultiplier = 3.5f;  // Faster falling for a snappier feel
+    public float lowJumpMultiplier = 3f; // More control over jump height
+    public float coyoteTime = 0.1f;  // Small window for late jumps
 
-    public float jumpDelay;
-    public float jumpForce = 10f;
     public LayerMask groundLayer;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
 
     private bool isGrounded;
-    private float moveInput;
     private bool isJumping;
+    private float moveInput;
+    private float coyoteTimeCounter;
 
     private void Awake()
     {
@@ -34,48 +36,59 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
         moveInput = moveAction.ReadValue<Vector2>().x;
+
         
-        if (jumpAction.triggered && isGrounded)
-        {
-            isJumping = true;
-        }
+        if (moveInput < 0)
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        else if (moveInput > 0)
+            transform.eulerAngles = new Vector3(0, 0, 0);
+
         
-        animator.SetFloat("Speed", Mathf.Abs(moveInput));
-        if(invokingJump)
+        if (isGrounded)
         {
-            animator.SetBool("isGrounded", false);
+            coyoteTimeCounter = coyoteTime;
         }
         else
         {
-            animator.SetBool("isGrounded", isGrounded);
+            coyoteTimeCounter -= Time.deltaTime;
         }
-        if(moveInput < 0)
+
+        
+        if (jumpAction.triggered && coyoteTimeCounter > 0)
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            isJumping = true;
+            coyoteTimeCounter = 0;
         }
-        else if(moveInput > 0)
-        {
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
+
+        
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+        animator.SetBool("isGrounded", isGrounded);
     }
 
     private void FixedUpdate()
     {
+        
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
+        
         if (isJumping)
         {
-            invokingJump = true;
-            Invoke(nameof(Jump), jumpDelay); 
-            isJumping = false;           
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            isJumping = false;
         }
-    }
 
-    private void Jump()
-    {
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        invokingJump = false;
+        
+        if (rb.velocity.y < 0) 
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
+        }
+        else if (rb.velocity.y > 0 && !jumpAction.IsPressed()) // Letting go of jump early
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
+        }
     }
 }
