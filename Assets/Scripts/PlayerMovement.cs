@@ -1,23 +1,26 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+[SerializeField] class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator animator;
     private PlayerInput playerInput;
     private InputAction moveAction;
     private InputAction jumpAction;
+    private bool invokingJump;
 
-    public float moveSpeed = 5f;
-    public float jumpForce = 14f;  // Increased for a stronger jump
-    public float fallMultiplier = 3.5f;  // Faster falling for a snappier feel
-    public float lowJumpMultiplier = 3f; // More control over jump height
-    public float coyoteTime = 0.1f;  // Small window for late jumps
+    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float jumpAnimationDelay = 0.1f;
 
-    public LayerMask groundLayer;
-    public Transform groundCheck;
-    public float groundCheckRadius = 0.2f;
+    [SerializeField] float jumpForce = 14f;  // Increased for a stronger jump
+    [SerializeField] float fallMultiplier = 3.5f;  // Faster falling for a snappier feel
+    [SerializeField] float lowJumpMultiplier = 3f; // More control over jump height
+    [SerializeField] float coyoteTime = 0.1f;  // Small window for late jumps
+
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] Transform groundCheck;
+    [SerializeField] float groundCheckRadius = 0.2f;
 
     private bool isGrounded;
     private bool isJumping;
@@ -64,9 +67,15 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter = 0;
         }
 
-        
+        if(invokingJump)
+        {
+            animator.SetBool("isGrounded", false);
+        }
+        else
+        {
+            animator.SetBool("isGrounded", isGrounded);
+        }
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
-        animator.SetBool("isGrounded", isGrounded);
     }
 
     private void FixedUpdate()
@@ -77,7 +86,8 @@ public class PlayerMovement : MonoBehaviour
         
         if (isJumping)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            Invoke("Jump", jumpAnimationDelay);
+            invokingJump = true;
             isJumping = false;
         }
 
@@ -90,5 +100,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
         }
+    }
+
+    private void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        invokingJump = false;
     }
 }
