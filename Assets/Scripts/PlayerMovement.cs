@@ -337,7 +337,6 @@ class PlayerMovement : MonoBehaviour
     #region Collision Checks
     private void IsGrounded()
     {
-        Debug.Log("isGrounded");
         Vector2 boxCastOrigin = new Vector2(_feetCol.bounds.center.x, _feetCol.bounds.min.y);
         Vector2 boxCastSize = new Vector2(_feetCol.bounds.size.x, _playerMovementStats.GroundDetectionRayLength);
 
