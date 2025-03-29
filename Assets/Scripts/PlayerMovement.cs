@@ -47,7 +47,7 @@ class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        _fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedDampingChangeThreshold;
+        //_fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedDampingChangeThreshold;
     }
     private void Awake() 
     {
@@ -390,7 +390,7 @@ class PlayerMovement : MonoBehaviour
     private void CollisionCheck()
     {
         IsGrounded();
-        HeadCheck();
+        //HeadCheck();
     }
     #endregion
 }

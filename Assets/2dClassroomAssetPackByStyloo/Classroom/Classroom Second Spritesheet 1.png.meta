@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -93,9 +93,749 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 931
+        width: 61
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3681c4d195eac984babffbe58889de3b
+      internalID: 2004862721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 942
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc8e2a5d1f77d54a9d07988dc21b91f
+      internalID: 1768241195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 939
+        width: 53
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9d3dafd7ee49e4b82acc24eaca0bc1
+      internalID: 1067182550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 925
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b75faa641bb6684485196fb26e202cc
+      internalID: 1293736131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 937
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be34556b5586fcb4d824fa30945b7095
+      internalID: -202300486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 932
+        width: 54
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66462be15c3daf840a6cfedf3d4f58ac
+      internalID: 225943760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 930
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34daf7c0e7b96574285900c6dcb79abd
+      internalID: -1691463082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 942
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ea9b50141630d4897d1a9bb2f07645
+      internalID: 1576932602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 937
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4ed42bca67e354eb67787f237043b9
+      internalID: -101063241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_9
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 903
+        width: 50
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a9f72fa99657c458092614ff9295fd
+      internalID: -1240067344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 886
+        width: 113
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88dec8c4357e91347aa72b2c2df52f38
+      internalID: 844803242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 791
+        width: 61
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af19a423e72ab644a8abaf29597f4780
+      internalID: -458231733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_12
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 824
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637f9fdb8ba0eeb4e99aa81317e54a3e
+      internalID: 8161505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_13
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 835
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd04aff7616c5043bb1d981b4e997ba
+      internalID: 1156153908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_14
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 831
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42754b87fa7e36478fc70a2793ceec5
+      internalID: 1685974549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 801
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41acb65203d2f6a4e80cdfc6598ed380
+      internalID: -187181641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_16
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 799
+        width: 53
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cf17cd6fd7dc34e9e37ac756c3be9b
+      internalID: 1803036817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_17
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 650
+        width: 61
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90b0292efdb9774d8430dc7ad5e13df
+      internalID: 488209774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_18
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 694
+        width: 125
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e708b05079c12234f803aae7d758e930
+      internalID: 372531447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_19
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 660
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d3cfa7f16e696438b3a6c694ad4a4c
+      internalID: 2074649650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_20
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 658
+        width: 53
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7bc8cce552eff418430a7ee3231334
+      internalID: -1036211644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_21
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 652
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8c1cf4c0b96474f95b6b33836571c3
+      internalID: 327966029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_22
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 651
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228fb6b0c30849d429cd6361663c3765
+      internalID: 596892362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_23
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 652
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8ee7e3a8c73b14f89f7e5c1faea34d
+      internalID: -752810008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_24
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 647
+        width: 59
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3447fa87fe6776847a4941c3fcf6a8c6
+      internalID: 1578455500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_25
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 515
+        width: 229
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74031b71fbea2824698833a8605697ab
+      internalID: -1940815908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_26
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 614
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665e4f75c182f1a4da2e11a2a5218f06
+      internalID: 1178475553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_27
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 614
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32abbcb9e3d96848a8eeb38ead45999
+      internalID: 697439248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_28
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 614
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96dec9993a7cfcb4185e5504632b2e51
+      internalID: -2095768123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_29
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 523
+        width: 125
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea8e676706bba64d946fa6bfc7c434a
+      internalID: -741444691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_30
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 575
+        width: 59
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695744c1644b2e24bb8e6c8766827c93
+      internalID: -1058065791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_31
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 32
+        width: 223
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30b23255b7779544a4ca433c12fb1ea
+      internalID: 855482539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_32
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 92
+        width: 170
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bec25e8b11da14c9b4de739206231b
+      internalID: -41985852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classroom Second Spritesheet 1_33
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 81
+        width: 221
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6139296074ac92245a272f2e6a832abb
+      internalID: 2095363974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +846,41 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Classroom Second Spritesheet 1_0: 2004862721
+      Classroom Second Spritesheet 1_1: 1768241195
+      Classroom Second Spritesheet 1_10: 844803242
+      Classroom Second Spritesheet 1_11: -458231733
+      Classroom Second Spritesheet 1_12: 8161505
+      Classroom Second Spritesheet 1_13: 1156153908
+      Classroom Second Spritesheet 1_14: 1685974549
+      Classroom Second Spritesheet 1_15: -187181641
+      Classroom Second Spritesheet 1_16: 1803036817
+      Classroom Second Spritesheet 1_17: 488209774
+      Classroom Second Spritesheet 1_18: 372531447
+      Classroom Second Spritesheet 1_19: 2074649650
+      Classroom Second Spritesheet 1_2: 1067182550
+      Classroom Second Spritesheet 1_20: -1036211644
+      Classroom Second Spritesheet 1_21: 327966029
+      Classroom Second Spritesheet 1_22: 596892362
+      Classroom Second Spritesheet 1_23: -752810008
+      Classroom Second Spritesheet 1_24: 1578455500
+      Classroom Second Spritesheet 1_25: -1940815908
+      Classroom Second Spritesheet 1_26: 1178475553
+      Classroom Second Spritesheet 1_27: 697439248
+      Classroom Second Spritesheet 1_28: -2095768123
+      Classroom Second Spritesheet 1_29: -741444691
+      Classroom Second Spritesheet 1_3: 1293736131
+      Classroom Second Spritesheet 1_30: -1058065791
+      Classroom Second Spritesheet 1_31: 855482539
+      Classroom Second Spritesheet 1_32: -41985852
+      Classroom Second Spritesheet 1_33: 2095363974
+      Classroom Second Spritesheet 1_4: -202300486
+      Classroom Second Spritesheet 1_5: 225943760
+      Classroom Second Spritesheet 1_6: -1691463082
+      Classroom Second Spritesheet 1_7: 1576932602
+      Classroom Second Spritesheet 1_8: -101063241
+      Classroom Second Spritesheet 1_9: -1240067344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -31,7 +31,7 @@ MonoBehaviour:
   JumpCoyoteTime: 0.1
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   GroundDetectionRayLength: 0.37
   HeadDetectionRayLength: 0.02
   HeadWidth: 0.75
