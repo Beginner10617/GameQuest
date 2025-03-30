@@ -14,6 +14,7 @@ public class princess : MonoBehaviour
     [SerializeField] bool attacking = false;
     [SerializeField] private float attackRange;
     [SerializeField] private float attackCooldown;
+    private bool canAttack = true;
     [Header("Ammo")]
     [SerializeField] GameObject ammoPrefab;
     [SerializeField] Transform ammoSpawnPoint;
@@ -22,7 +23,7 @@ public class princess : MonoBehaviour
     [SerializeField] private float ammoDamage;
     void Start()
     {
-        direction = (int) Mathf.Sign(endPoint.position.x - startPoint.position.x);
+        direction = (int)Mathf.Sign(endPoint.position.x - startPoint.position.x);
         Debug.Log("Direction: " + direction.ToString());
     }
 
@@ -35,13 +36,13 @@ public class princess : MonoBehaviour
         }
         else if (attacking)
         {
-           // Attack();
-        }   
+            AttackPlayer();
+        }
     }
     private void CheckAttack()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange, playerLayer);
-        if(colliders.Length > 0)
+        if (colliders.Length > 0)
         {
             attacking = true;
             patrolling = false;
@@ -65,12 +66,38 @@ public class princess : MonoBehaviour
             direction = 1;
         }
     }
+    private void AttackPlayer()
+    {
+        if (attacking && canAttack)
+        {
+            Collider2D player = Physics2D.OverlapCircle(transform.position, attackRange, playerLayer);
+            if (player != null)
+            {
+                Vector2 directionToPlayer = (player.transform.position - ammoSpawnPoint.position).normalized;
+                transform.localScale = new Vector3(-directionToPlayer.x * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                //Debug.LogWarning(directionToPlayer);
+                GameObject ammo = Instantiate(ammoPrefab, ammoSpawnPoint.position, Quaternion.identity);
+                Rigidbody2D ammoRb = ammo.GetComponent<Rigidbody2D>();
+                if (ammoRb != null)
+                {
+                    ammoRb.velocity = directionToPlayer * ammoSpeed;
+                }
+                Destroy(ammo, ammoLifeTime);
+                canAttack = false;
+                Invoke(nameof(ResetAttack), attackCooldown);
+            }
+        }
+    }
+    private void ResetAttack()
+    {
+        canAttack = true;
+    }
     void OnDrawGizmosSelected()
-{
-    Gizmos.color = Color.red; // Set color for visibility
+    {
+        Gizmos.color = Color.red; // Set color for visibility
 #if UNITY_EDITOR
-    Handles.color = Color.red;
-    Handles.DrawWireDisc(transform.position, Vector3.forward, attackRange);
+        Handles.color = Color.red;
+        Handles.DrawWireDisc(transform.position, Vector3.forward, attackRange);
 #endif
-}
+    }
 }
