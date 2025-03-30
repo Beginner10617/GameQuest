@@ -21,6 +21,8 @@ public class princess : MonoBehaviour
     [SerializeField] private float ammoSpeed;
     [SerializeField] private float ammoLifeTime;
     [SerializeField] private float ammoDamage;
+    [Header("Decrease Effect")]
+    [SerializeField] private RectTransform effectSpawnPoint;
     void Start()
     {
         direction = (int)Mathf.Sign(endPoint.position.x - startPoint.position.x);
@@ -77,6 +79,7 @@ public class princess : MonoBehaviour
                 transform.localScale = new Vector3(-Mathf.Sign(directionToPlayer.x) * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 //Debug.LogWarning(directionToPlayer);
                 GameObject ammo = Instantiate(ammoPrefab, ammoSpawnPoint.position, Quaternion.identity);
+                ammo.GetComponent<decreaseTimer>().effectSpawnPoint = effectSpawnPoint;
                 Rigidbody2D ammoRb = ammo.GetComponent<Rigidbody2D>();
                 if (ammoRb != null)
                 {
