@@ -46,12 +46,12 @@ public class princess : MonoBehaviour
         {
             attacking = true;
             patrolling = false;
-            Debug.Log("Attacking");
+            //Debug.Log("Attacking");
             return;
         }
         attacking = false;
         patrolling = true;
-        Debug.Log("Patrolling");
+        //Debug.Log("Patrolling");
     }
     private void Patrol()
     {
@@ -74,7 +74,7 @@ public class princess : MonoBehaviour
             if (player != null)
             {
                 Vector2 directionToPlayer = (player.transform.position - ammoSpawnPoint.position).normalized;
-                transform.localScale = new Vector3(-directionToPlayer.x * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                transform.localScale = new Vector3(-Mathf.Sign(directionToPlayer.x) * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 //Debug.LogWarning(directionToPlayer);
                 GameObject ammo = Instantiate(ammoPrefab, ammoSpawnPoint.position, Quaternion.identity);
                 Rigidbody2D ammoRb = ammo.GetComponent<Rigidbody2D>();
