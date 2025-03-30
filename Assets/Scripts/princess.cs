@@ -80,7 +80,7 @@ public class princess : MonoBehaviour
                 Rigidbody2D ammoRb = ammo.GetComponent<Rigidbody2D>();
                 if (ammoRb != null)
                 {
-                    ammoRb.velocity = directionToPlayer * ammoSpeed;
+                    ammoRb.velocity = new Vector2(directionToPlayer.x * ammoSpeed, ammoRb.velocity.y);
                 }
                 Destroy(ammo, ammoLifeTime);
                 canAttack = false;
