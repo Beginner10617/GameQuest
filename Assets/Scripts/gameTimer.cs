@@ -9,11 +9,15 @@ public class gameTimer : MonoBehaviour
     [SerializeField] private Image timerImage;
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private float totalTime;
+    [SerializeField] private bool restartTimerOnStart = false;
     public static float currentTime;
     // Start is called before the first frame update
     void Start()
     {
-        currentTime = totalTime;
+        if(restartTimerOnStart)
+        {
+            currentTime = totalTime;
+        }
         timerText.text = currentTime.ToString();
         StartCoroutine(TimerUpdater());
     }

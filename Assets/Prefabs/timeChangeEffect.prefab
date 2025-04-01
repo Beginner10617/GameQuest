@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8017286579470912418}
   - component: {fileID: -153708943357477765}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: timeChangeEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,3 +152,4 @@ MonoBehaviour:
   moveSpeed: 50
   destroyDelay: 5
   text: -20
+  timeToDecrease: 5

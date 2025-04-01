@@ -8,7 +8,10 @@ public class PlayerShoot : MonoBehaviour
     public float timeInBetweenBullets = 0.1f;
 
     private float timer = 0f;
-
+    void Start()
+    {
+    //    Debug.Log("Time left:" + gameTimer.currentTime.ToString());
+    }
     void FixedUpdate()
     {
         timer += Time.deltaTime;
