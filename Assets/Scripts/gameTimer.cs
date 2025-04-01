@@ -32,6 +32,12 @@ public class gameTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(currentTime < 0f)
+        {
+            timerImage.fillAmount = 0f;
+            timerText.text = "0";
+            Time.timeScale = 0f;
+            Debug.Log("Game Over");
+        }
     }
 }
