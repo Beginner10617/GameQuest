@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FallingGameOver : MonoBehaviour
 {
-    void OisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -12,5 +12,6 @@ public class FallingGameOver : MonoBehaviour
             Debug.Log("Game Over");
             // Game over logic here
         }
+        Destroy(gameObject);
     }
 }

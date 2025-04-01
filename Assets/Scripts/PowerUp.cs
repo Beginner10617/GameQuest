@@ -9,10 +9,13 @@ public class PowerUp : MonoBehaviour
     [SerializeField] public RectTransform effectSpawnPoint; // Point where the effect will be spawned
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Collision detected with: " + collision.gameObject.name);
         if(collision.gameObject.tag == "Player")
         {
             gameTimer.currentTime += timeToIncrease;
+            Debug.Log("Increased time by " + timeToIncrease + " seconds. Current time: " + gameTimer.currentTime);
             SpawnIncreaseEffect();
+            Debug.Log("Spawned increase effect");
             Destroy(gameObject);
         }
     }
