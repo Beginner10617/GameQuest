@@ -14,6 +14,7 @@ public class decreaseTimer : MonoBehaviour
             SpawnDecreaseEffect();
             Destroy(gameObject);
         }   
+        
     }
     public void DecreaseTimer()
     {
