@@ -10,8 +10,9 @@ public class FallingGameOver : MonoBehaviour
         {
             gameTimer.currentTime = 0f;
             Debug.Log("Game Over");
+            Time.timeScale = 0f; // Pause the game
             // Game over logic here
         }
-        Destroy(gameObject);
+        Destroy(collision.gameObject);
     }
 }
