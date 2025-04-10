@@ -11,6 +11,7 @@ public class gameTimer : MonoBehaviour
     [SerializeField] private float totalTime;
     [SerializeField] private bool restartTimerOnStart = false;
     public static float currentTime;
+    public bool isTimerEnabled = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +20,17 @@ public class gameTimer : MonoBehaviour
             currentTime = totalTime;
         }
         timerText.text = currentTime.ToString();
-        StartCoroutine(TimerUpdater());
+        if(isTimerEnabled) StartCoroutine(TimerUpdater());
     }
-
+    public void DisableTimer()
+    {
+        isTimerEnabled = false;
+    }
+    public void EnableTimer()
+    {
+        isTimerEnabled = true;
+        Start();
+    }
     public IEnumerator TimerUpdater()
     {
         while(currentTime > 0f)
