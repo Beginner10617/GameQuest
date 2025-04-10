@@ -278,7 +278,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 9.359532
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -686,10 +686,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f0891daf08b37429b46e8a2f48b20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseRange: 13.4
-  stopDistance: 2.82
+  leftEdge: {fileID: 1007937802}
+  rightEdge: {fileID: 920405440}
   moveSpeed: 2
   enemy: {fileID: 408042765}
+  chaseRange: 13.4
+  stopDistance: 2.82
 --- !u!4 &244892668
 Transform:
   m_ObjectHideFlags: 0
@@ -4053,10 +4055,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f0891daf08b37429b46e8a2f48b20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseRange: 13.4
-  stopDistance: 2.82
+  leftEdge: {fileID: 1596515295}
+  rightEdge: {fileID: 942800356}
   moveSpeed: 2
   enemy: {fileID: 2068784920}
+  chaseRange: 13.4
+  stopDistance: 2.82
 --- !u!1 &1773703789
 GameObject:
   m_ObjectHideFlags: 0
@@ -4104,10 +4108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f0891daf08b37429b46e8a2f48b20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseRange: 13.4
-  stopDistance: 2.82
+  leftEdge: {fileID: 1457935609}
+  rightEdge: {fileID: 1154319683}
   moveSpeed: 2
   enemy: {fileID: 1558428436}
+  chaseRange: 13.4
+  stopDistance: 2.82
 --- !u!1 &1795857780
 GameObject:
   m_ObjectHideFlags: 0
