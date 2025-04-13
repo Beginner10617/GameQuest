@@ -13,10 +13,12 @@ public class InputManager : MonoBehaviour
     public static bool jumpWasReleased;
     public static bool RunIsHeld;
     public static float shootIsHeld;
+    public static float mukkaPressed;
     private InputAction _moveAction;
     private InputAction _jumpAction;
     private InputAction _runAction;
     private InputAction _shootAction;
+    private InputAction _mukkaAction;
     private void Awake()
     {
         _playerInput = GetComponent<PlayerInput>();
@@ -25,6 +27,7 @@ public class InputManager : MonoBehaviour
         _jumpAction = _playerInput.actions["Jump"];
         _runAction = _playerInput.actions["Run"];
         _shootAction = _playerInput.actions["Shoot"];
+        _mukkaAction = _playerInput.actions["Mukka"];
     }
     // Update is called once per frame
     void Update()
@@ -38,6 +41,7 @@ public class InputManager : MonoBehaviour
         RunIsHeld = _runAction.IsPressed();
 
         shootIsHeld = _shootAction.ReadValue<float>();
+        mukkaPressed = _mukkaAction.ReadValue<float>();
 
     }
     public void JumpAction(InputAction.CallbackContext context)

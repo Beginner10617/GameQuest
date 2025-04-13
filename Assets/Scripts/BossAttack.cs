@@ -30,7 +30,7 @@ public class BossAttack : MonoBehaviour
 
     public void ReduceTimer()
     {
-        if (PlayerInSight()) { gameTimer.currentTime -= damage; SpawnDecreaseEffect(); }
+        if (PlayerInSight()) {gameTimer.currentTime -= damage; SpawnDecreaseEffect(); }
         //_enemyPatrol.isAttacking = false;   
 
     }

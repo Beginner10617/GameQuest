@@ -30,7 +30,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ThrowChar1
-  m_Speed: 0.2
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7512401608565005214}
@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb9bd4fe7d87df42bda009cc00d3e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 4
-  attackRange: 9
+  enemySpeed: 5
+  attackRange: 2.6
 --- !u!1102 &2473563609941216191
 AnimatorState:
   serializedVersion: 6
