@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8165288005592822042}
   - component: {fileID: 8830582812269341324}
   - component: {fileID: 2925755692363864490}
-  - component: {fileID: 1180300120538868100}
   - component: {fileID: -1665550415709785339}
+  - component: {fileID: 3782825019588635156}
+  - component: {fileID: -3417232690865431301}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 0.8817941, b: 0.073584795, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,8 +115,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!60 &1180300120538868100
-PolygonCollider2D:
+--- !u!114 &-1665550415709785339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680820851243154529}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8833864869edc4443baae675470e9830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootPosition: {fileID: 0}
+  bullet: {fileID: 0}
+  bulletSpeed: 50
+  timeInBetweenBullets: 0.1
+--- !u!58 &3782825019588635156
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -129,7 +146,7 @@ PolygonCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -143,26 +160,13 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
-  m_UseDelaunayMesh: 0
---- !u!114 &-1665550415709785339
+  serializedVersion: 2
+  m_Radius: 0.5000001
+--- !u!114 &-3417232690865431301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,10 +175,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1680820851243154529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8833864869edc4443baae675470e9830, type: 3}
+  m_Script: {fileID: 11500000, guid: e98ab1e7718fcae4bbf229d07ed568f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootPosition: {fileID: 0}
-  bullet: {fileID: 0}
-  bulletSpeed: 50
-  timeInBetweenBullets: 0.1

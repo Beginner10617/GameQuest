@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrolAndChase : MonoBehaviour
+public class EnemyPatrol : MonoBehaviour
 {
     [Header("Patrol Points")]
     [SerializeField] private Transform leftEdge;
@@ -16,18 +16,34 @@ public class EnemyPatrolAndChase : MonoBehaviour
     [SerializeField] private float chaseRange = 5f;
     [SerializeField] private float stopDistance = 1.2f;
 
+    [Header("Animator")]
+    [SerializeField] private Animator animator;
+    public bool isAttacking = false;
+    public meleeEnemy _meleeEnemy;
+
     private Transform player;
     private Vector3 initScale;
     private bool movingLeft = true;
-
+    bool canMove = true;
+    
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         initScale = enemy.localScale;
     }
-
+    public void disablePatrolnChase()
+    {
+        canMove = false;
+    }
+    public void enablePatrolnChase()
+    {
+        canMove = true;
+    }
+    
     private void Update()
     {
+        if (_meleeEnemy.animRunning) { Debug.LogWarning("hello kittty"); return; }
+        if (!canMove) { animator.SetFloat("moveSpeed", 0f); return; }
         if (player == null) return;
 
         float distanceToPlayer = Mathf.Abs(enemy.position.x - player.position.x);
@@ -41,14 +57,23 @@ public class EnemyPatrolAndChase : MonoBehaviour
             Patrol();
         }
         // else: If within stopDistance, just idle
+        else FacePlayer();
     }
 
     private void ChasePlayer()
     {
+        
+        
         float direction = Mathf.Sign(player.position.x - enemy.position.x);
         Vector3 targetPosition = new Vector3(player.position.x, enemy.position.y, enemy.position.z);
         enemy.position = Vector3.MoveTowards(enemy.position, targetPosition, moveSpeed * Time.deltaTime);
-
+        animator.SetFloat("moveSpeed", moveSpeed);
+        if (direction != 0) enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
+        
+    }
+    private void FacePlayer()
+    {
+        float direction = Mathf.Sign(player.position.x - enemy.position.x);
         if (direction != 0)
             enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
     }
@@ -81,6 +106,7 @@ public class EnemyPatrolAndChase : MonoBehaviour
 
     private void MoveInDirection(int direction)
     {
+        animator.SetFloat("moveSpeed", moveSpeed);
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
         enemy.position = new Vector3(enemy.position.x + Time.deltaTime * direction * moveSpeed,
                                      enemy.position.y, enemy.position.z);

@@ -10,27 +10,40 @@ public class meleeEnemy : MonoBehaviour
     [SerializeField] private float colliderSize;
     [SerializeField] private BoxCollider2D _collider;
     [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private Animator animator;
+    [SerializeField] EnemyPatrol _enemyPatrol;
     private float cooldownTimer = Mathf.Infinity;
-
+    public bool animRunning = false;
     private void Update()
     {
         cooldownTimer += Time.deltaTime;
 
         if (PlayerInSight())
         {
+            Debug.Log("PLAYER SIGHTED");
             if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
+                animator.SetTrigger("Attack");
+                
                 Debug.Log("Attacked Player");
-                ReduceTimer(damage);
-                // Minus timer
+                
 
             }
         }
         
+        
     }
 
-
+    public void AttackAnimStarted()
+    {
+        animator.SetFloat("moveSpeed", 0f);
+        animRunning = true;
+    }
+    public void attackAnimCompleted()
+    {
+        animRunning = false;
+    }
     private bool PlayerInSight()
     {
         RaycastHit2D hit = Physics2D.BoxCast(_collider.bounds.center + transform.right * range * transform.localScale.x, 
@@ -46,9 +59,10 @@ public class meleeEnemy : MonoBehaviour
             new Vector3(_collider.bounds.size.x * colliderSize, _collider.bounds.size.y, _collider.bounds.size.z));
     }
 
-    private void ReduceTimer(int time)
+    public void ReduceTimer(int time)
     {
-        gameTimer.currentTime -= time;
+        if (PlayerInSight()) { gameTimer.currentTime -= time; }
+        //_enemyPatrol.isAttacking = false;   
 
     }
 }
