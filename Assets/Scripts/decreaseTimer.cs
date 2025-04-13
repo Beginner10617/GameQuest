@@ -12,6 +12,7 @@ public class decreaseTimer : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             SpawnDecreaseEffect();
+            DecreaseTimer();
             Destroy(gameObject);
         }   
         

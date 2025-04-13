@@ -10384,6 +10384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7880842284308596192, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
+      propertyPath: isTimerEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8104685958138863834, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -197,6 +197,17 @@
                 },
                 {
                     "name": "",
+                    "id": "ade8d3f5-ed2b-4237-88b9-3f54bb12ce95",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d9911623-3880-496d-ba90-e2ac5510adb8",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",

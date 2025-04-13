@@ -13,6 +13,9 @@ public class BossHealth : MonoBehaviour
     public bool isInvulnerable = false;
     public GameObject bossBoundaryWalls;
 
+    [SerializeField] private GameObject decreaseEffectPrefab; // Prefab for the effect
+    [SerializeField] public RectTransform effectSpawnPoint;
+    public float timeToIncrease = 30f;
     private void Start()
     {
         maxHealth = health;
@@ -72,7 +75,22 @@ public class BossHealth : MonoBehaviour
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        gameTimer.currentTime += timeToIncrease;
+        SpawnIncreaseEffect();
         bossBoundaryWalls.SetActive(false);
+    }
+
+    void SpawnIncreaseEffect()
+    {
+        if (decreaseEffectPrefab != null && effectSpawnPoint != null)
+        {
+            GameObject effect = Instantiate(decreaseEffectPrefab, effectSpawnPoint);
+            RectTransform rectTransform = effect.GetComponent<RectTransform>();
+            effect.GetComponent<DecreaseEffect>().timeToDecrease = timeToIncrease; // Set the time to decrease
+            rectTransform.anchoredPosition = Vector2.zero;  // Set to center
+            rectTransform.localScale = Vector3.one;
+            effect.GetComponent<DecreaseEffect>().text = "+" + timeToIncrease.ToString() + "s";
+        }
     }
 
 }

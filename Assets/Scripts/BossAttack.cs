@@ -9,7 +9,9 @@ public class BossAttack : MonoBehaviour
     [SerializeField] private float colliderSize;
     [SerializeField] private BoxCollider2D _collider;
     [SerializeField] private LayerMask playerLayer;
-    
+
+    [SerializeField] private GameObject decreaseEffectPrefab; // Prefab for the effect
+    [SerializeField] public RectTransform effectSpawnPoint;
 
     private bool PlayerInSight()
     {
@@ -28,10 +30,21 @@ public class BossAttack : MonoBehaviour
 
     public void ReduceTimer()
     {
-        if (PlayerInSight()) { gameTimer.currentTime -= damage; }
+        if (PlayerInSight()) { gameTimer.currentTime -= damage; SpawnDecreaseEffect(); }
         //_enemyPatrol.isAttacking = false;   
 
     }
+    void SpawnDecreaseEffect()
+    {
+        if (decreaseEffectPrefab != null && effectSpawnPoint != null)
+        {
+            GameObject effect = Instantiate(decreaseEffectPrefab, effectSpawnPoint);
+            RectTransform rectTransform = effect.GetComponent<RectTransform>();
+            //effect.GetComponent<DecreaseEffect>().timeToDecrease = timeToDecrease; // Set the time to decrease
+            rectTransform.anchoredPosition = Vector2.zero;  // Set to center
+            rectTransform.localScale = Vector3.one;
+            effect.GetComponent<DecreaseEffect>().text = "-" + damage.ToString() + "s";
+        }
+    }
 
-    
 }

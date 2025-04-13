@@ -8,7 +8,7 @@ public class shootStone : MonoBehaviour
     [SerializeField] private GameObject stoneGameObject;
     [SerializeField] private float stoneSpeed;
     [SerializeField] private Transform spawnLocation;
-    
+    [SerializeField] private RectTransform textSpawnLocationRect;
     public void ShootStone()
     {
         //Debug.LogWarning(this.gameObject.transform.localScale.x);
@@ -16,6 +16,7 @@ public class shootStone : MonoBehaviour
         
         GameObject s = Instantiate(stoneGameObject, spawnLocation.position, Quaternion.identity);
         s.GetComponent<Rigidbody2D>().velocity = new Vector2(direction * stoneSpeed, -2f);
+        s.GetComponent<decreaseTimer>().effectSpawnPoint = textSpawnLocationRect;
         if (s != null) Destroy(s, 5f);
     }
 }

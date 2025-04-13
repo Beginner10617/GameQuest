@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 8165288005592822042}
   - component: {fileID: 8830582812269341324}
   - component: {fileID: 2925755692363864490}
-  - component: {fileID: -1665550415709785339}
   - component: {fileID: 3782825019588635156}
-  - component: {fileID: 3593062952613012819}
+  - component: {fileID: 3961051476186154293}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -115,22 +114,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &-1665550415709785339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680820851243154529}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8833864869edc4443baae675470e9830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootPosition: {fileID: 0}
-  bullet: {fileID: 0}
-  bulletSpeed: 50
-  timeInBetweenBullets: 0.1
 --- !u!58 &3782825019588635156
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,7 +149,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5000001
---- !u!114 &3593062952613012819
+--- !u!114 &3961051476186154293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,7 +158,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1680820851243154529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd4ceab551f9b8b40bbd063bb3902183, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a8a1691030b98d418696aef543857fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 15
+  timeToDecrease: 15
+  decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 0}

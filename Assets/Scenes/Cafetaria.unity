@@ -16605,6 +16605,7 @@ MonoBehaviour:
   timerText: {fileID: 5169867907354661586}
   totalTime: 150
   restartTimerOnStart: 0
+  isTimerEnabled: 1
 --- !u!1 &6053613274586453253
 GameObject:
   m_ObjectHideFlags: 0
