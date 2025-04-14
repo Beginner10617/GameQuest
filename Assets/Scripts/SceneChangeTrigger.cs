@@ -10,7 +10,16 @@ public class SceneChangeTrigger : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Load the specified scene
-            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneToLoad);
+            ChangeScene();
         }
+    }
+    public void ChangeScene()
+    {
+        // Load the specified scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneToLoad);
+    }
+    public void Reset()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
