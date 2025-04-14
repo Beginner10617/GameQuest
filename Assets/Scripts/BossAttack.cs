@@ -9,7 +9,7 @@ public class BossAttack : MonoBehaviour
     [SerializeField] private float colliderSize;
     [SerializeField] private BoxCollider2D _collider;
     [SerializeField] private LayerMask playerLayer;
-
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject decreaseEffectPrefab; // Prefab for the effect
     [SerializeField] public RectTransform effectSpawnPoint;
 
@@ -33,6 +33,10 @@ public class BossAttack : MonoBehaviour
         if (PlayerInSight()) {gameTimer.currentTime -= damage; SpawnDecreaseEffect(); }
         //_enemyPatrol.isAttacking = false;   
 
+    }
+    public void PlayAudio()
+    {
+        if (audioSource != null) audioSource.Play();
     }
     void SpawnDecreaseEffect()
     {

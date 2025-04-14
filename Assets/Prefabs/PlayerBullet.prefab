@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.0745098, g: 1, b: 0.92570025, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1d72862c5fa56694fac181111b4512f6, type: 3}
+  m_Color: {r: 0.48674262, g: 0.5169811, b: 0.5145467, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -163,9 +163,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.01, y: 0.040639132}
   serializedVersion: 2
-  m_Radius: 0.5000001
+  m_Radius: 0.92090404
 --- !u!114 &-3417232690865431301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,4 +178,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98ab1e7718fcae4bbf229d07ed568f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 15
+  bulletDamage: 40

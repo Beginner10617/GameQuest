@@ -15,6 +15,7 @@ public class Minion_Run : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         boss = animator.GetComponent<Boss>();
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -25,6 +26,7 @@ public class Minion_Run : StateMachineBehaviour
         if (Vector2.Distance(rb.position, player.position) <= attackRange)
         {
             animator.SetTrigger("Attack");
+            
         }
         else
         {

@@ -15,7 +15,7 @@ public class PlayerMukka : MonoBehaviour
     [SerializeField] private float colliderSize;
     [SerializeField] private BoxCollider2D _collider;
     [SerializeField] private LayerMask enemyLayer;
-
+    [SerializeField] private AudioSource audioSource;
     BossHealth _bossHealth;
     void FixedUpdate()
     {
@@ -35,8 +35,12 @@ public class PlayerMukka : MonoBehaviour
         RaycastHit2D hit = Physics2D.BoxCast(_collider.bounds.center + transform.right * range * transform.localScale.x + transform.up * shiftUp,
             new Vector3(_collider.bounds.size.x * colliderSize, _collider.bounds.size.y * height, _collider.bounds.size.z),
             0, Vector2.left, 0, enemyLayer);
+        try
+        {
+            hit.collider.gameObject.TryGetComponent<BossHealth>(out _bossHealth);
+        }
+        catch { }
         
-        hit.collider.gameObject.TryGetComponent<BossHealth>(out _bossHealth);
         return hit.collider != null;
     }
 
@@ -46,14 +50,23 @@ public class PlayerMukka : MonoBehaviour
         Gizmos.DrawWireCube(_collider.bounds.center + transform.right * range * transform.localScale.x + transform.up * shiftUp,
             new Vector3(_collider.bounds.size.x * colliderSize, _collider.bounds.size.y * height, _collider.bounds.size.z));
     }
-
+    public void PlayAudio()
+    {
+        if(audioSource != null) audioSource.Play();
+    }
     public void DoDamage()
     {
-
+        
+        
+        Debug.LogWarning("DoDamage");
         if (EnemyInSight())
         {
             //Debug.LogWarning("Player Mukka marr raha h");
-            if(_bossHealth != null) _bossHealth.TakeDamage(damage);
+            if (_bossHealth != null) 
+            { 
+                _bossHealth.TakeDamage(damage); 
+                
+            }
         }
         //_enemyPatrol.isAttacking = false;   
 
