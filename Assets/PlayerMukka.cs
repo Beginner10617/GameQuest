@@ -17,6 +17,7 @@ public class PlayerMukka : MonoBehaviour
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private AudioSource audioSource;
     BossHealth _bossHealth;
+    MinionHealth _minionHealth;
     void FixedUpdate()
     {
         timer += Time.deltaTime;
@@ -38,6 +39,7 @@ public class PlayerMukka : MonoBehaviour
         try
         {
             hit.collider.gameObject.TryGetComponent<BossHealth>(out _bossHealth);
+            hit.collider.gameObject.TryGetComponent<MinionHealth>(out _minionHealth);
         }
         catch { }
         
@@ -66,6 +68,11 @@ public class PlayerMukka : MonoBehaviour
             { 
                 _bossHealth.TakeDamage(damage); 
                 
+            }
+            else if (_minionHealth != null)
+            {
+                _minionHealth.TakeDamage(damage);
+
             }
         }
         //_enemyPatrol.isAttacking = false;   

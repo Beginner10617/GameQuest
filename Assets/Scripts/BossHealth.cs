@@ -16,6 +16,7 @@ public class BossHealth : MonoBehaviour
     [SerializeField] private GameObject decreaseEffectPrefab; // Prefab for the effect
     [SerializeField] public RectTransform effectSpawnPoint;
     public float timeToIncrease = 30f;
+
     private void Start()
     {
         maxHealth = health;
@@ -74,6 +75,7 @@ public class BossHealth : MonoBehaviour
     void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
+        
         Destroy(gameObject);
         gameTimer.currentTime += timeToIncrease;
         SpawnIncreaseEffect();

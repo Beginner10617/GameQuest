@@ -626,10 +626,10 @@ RectTransform:
   - {fileID: 636074782}
   m_Father: {fileID: 1500654748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -106.36935}
-  m_SizeDelta: {x: 960, y: 212.7387}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 500, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &57081937
 MonoBehaviour:
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.972549}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -903,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 51a76180f5d5640169c5090ad884b0bb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.14
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 51a76180f5d5640169c5090ad884b0bb, type: 3}
       propertyPath: m_LocalScale.y
@@ -915,11 +915,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 51a76180f5d5640169c5090ad884b0bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.88
+      value: -19.03
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 51a76180f5d5640169c5090ad884b0bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 51a76180f5d5640169c5090ad884b0bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -955,7 +955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 51a76180f5d5640169c5090ad884b0bb, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6353377721804257713, guid: 51a76180f5d5640169c5090ad884b0bb, type: 3}
       propertyPath: m_Layer
@@ -1048,7 +1048,7 @@ PrefabInstance:
       addedObject: {fileID: 175914479}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 51a76180f5d5640169c5090ad884b0bb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 175914478}
+      addedObject: {fileID: 175914484}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 51a76180f5d5640169c5090ad884b0bb, type: 3}
 --- !u!1 &175914476 stripped
 GameObject:
@@ -1060,27 +1060,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 51a76180f5d5640169c5090ad884b0bb, type: 3}
   m_PrefabInstance: {fileID: 175914475}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &175914478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175914476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac1764c56b539c4785524ab1d12baf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossHealthBarSprite: {fileID: 0}
-  healthBarName: empty health bar
-  health: 100
-  deathEffect: {fileID: 0}
-  isInvulnerable: 0
-  bossBoundaryWalls: {fileID: 1036503692}
-  decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
-  effectSpawnPoint: {fileID: 1058730663}
-  timeToIncrease: 10
 --- !u!114 &175914479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1116,7 +1095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1872809062}
-  isFlipped: 1
+  isFlipped: 0
 --- !u!61 &175914481
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1210,6 +1189,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &175914484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175914476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94ea6a75dbe7ec4bad085e266504780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossHealthBarSprite: {fileID: 0}
+  healthBarName: empty health bar
+  health: 150
+  deathEffect: {fileID: 0}
+  isInvulnerable: 0
+  bossBoundaryWalls: {fileID: 1036503692}
+  decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 1058730663}
+  timeToIncrease: 14
 --- !u!4 &206813683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7084743873170716880, guid: 5507fd109e1947e43b0b8c9f3f83f832, type: 3}
@@ -1534,7 +1534,7 @@ PrefabInstance:
       objectReference: {fileID: 1680820851243154529, guid: e258188fde571ce45a33dbbb32f481a1, type: 3}
     - target: {fileID: 2020017072402779606, guid: 593d6f5d30d1e91448f80d572bcfef65, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2020017072402779606, guid: 593d6f5d30d1e91448f80d572bcfef65, type: 3}
       propertyPath: bulletSpeed
@@ -2635,27 +2635,6 @@ MonoBehaviour:
   audioSource: {fileID: 1308782947}
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 1058730663}
---- !u!114 &512598553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512598551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac1764c56b539c4785524ab1d12baf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossHealthBarSprite: {fileID: 0}
-  healthBarName: empty health bar
-  health: 100
-  deathEffect: {fileID: 0}
-  isInvulnerable: 0
-  bossBoundaryWalls: {fileID: 1036503692}
-  decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
-  effectSpawnPoint: {fileID: 1058730663}
-  timeToIncrease: 10
 --- !u!114 &512598554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2669,7 +2648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1872809062}
-  isFlipped: 1
+  isFlipped: 0
 --- !u!50 &512598555
 Rigidbody2D:
   serializedVersion: 4
@@ -2768,6 +2747,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 4d9e06b00b3f44278a386bc33095344c, type: 3}
   m_PrefabInstance: {fileID: 2066700751}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &512598559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512598551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94ea6a75dbe7ec4bad085e266504780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossHealthBarSprite: {fileID: 0}
+  healthBarName: empty health bar
+  health: 150
+  deathEffect: {fileID: 0}
+  isInvulnerable: 0
+  bossBoundaryWalls: {fileID: 1036503692}
+  decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 1058730663}
+  timeToIncrease: 10
 --- !u!1 &555616331
 GameObject:
   m_ObjectHideFlags: 0
@@ -4446,7 +4446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 3ac3b2ff5938a448987886e59c84c02e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.26
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 3ac3b2ff5938a448987886e59c84c02e, type: 3}
       propertyPath: m_LocalScale.y
@@ -4458,11 +4458,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 3ac3b2ff5938a448987886e59c84c02e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19
+      value: -23.53
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 3ac3b2ff5938a448987886e59c84c02e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.55
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 3ac3b2ff5938a448987886e59c84c02e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4498,7 +4498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 3ac3b2ff5938a448987886e59c84c02e, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7221020487405985688, guid: 3ac3b2ff5938a448987886e59c84c02e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4623,10 +4623,10 @@ PrefabInstance:
       addedObject: {fileID: 902884205}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 3ac3b2ff5938a448987886e59c84c02e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 902884204}
+      addedObject: {fileID: 902884209}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 3ac3b2ff5938a448987886e59c84c02e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 902884209}
+      addedObject: {fileID: 902884210}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 3ac3b2ff5938a448987886e59c84c02e, type: 3}
 --- !u!1 &902884202 stripped
 GameObject:
@@ -4654,27 +4654,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &902884204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902884202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac1764c56b539c4785524ab1d12baf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossHealthBarSprite: {fileID: 0}
-  healthBarName: empty health bar
-  health: 150
-  deathEffect: {fileID: 0}
-  isInvulnerable: 0
-  bossBoundaryWalls: {fileID: 1036503692}
-  decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
-  effectSpawnPoint: {fileID: 1058730663}
-  timeToIncrease: 12
 --- !u!114 &902884205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4688,7 +4667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1872809062}
-  isFlipped: 1
+  isFlipped: 0
 --- !u!61 &902884206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4788,6 +4767,27 @@ MonoBehaviour:
   audioSource: {fileID: 1801129420}
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 1058730663}
+--- !u!114 &902884210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902884202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94ea6a75dbe7ec4bad085e266504780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossHealthBarSprite: {fileID: 0}
+  healthBarName: empty health bar
+  health: 150
+  deathEffect: {fileID: 0}
+  isInvulnerable: 0
+  bossBoundaryWalls: {fileID: 1036503692}
+  decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 1058730663}
+  timeToIncrease: 15
 --- !u!1 &909090670
 GameObject:
   m_ObjectHideFlags: 0
@@ -6065,12 +6065,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a9a87e6efc1074d85b727ee1f64bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator:
+  animators:
   - {fileID: 902884203}
   - {fileID: 2015131386}
   - {fileID: 512598557}
   - {fileID: 175914483}
   boundary: {fileID: 1036503692}
+  _player: {fileID: 456335530}
+  PowerUpMessage: {fileID: 57081935}
 --- !u!61 &1155767811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8403,7 +8405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -109, y: -0.0000019073486}
+  m_AnchoredPosition: {x: -93.5, y: -0.0000019073486}
   m_SizeDelta: {x: 187, y: 187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1809443259
@@ -8426,7 +8428,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1d72862c5fa56694fac181111b4512f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8478,8 +8480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 385, y: -0.00000023841858}
-  m_SizeDelta: {x: 694.1373, y: 178.7583}
+  m_AnchoredPosition: {x: 166.2873, y: 2.0604}
+  m_SizeDelta: {x: 262.4255, y: 182.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1814774012
 MonoBehaviour:
@@ -8501,7 +8503,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: You can now throw Rocks using "LMB" or "R"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8535,8 +8537,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -8987,12 +8989,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2732664382375385659, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732664382375385659, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.89
+      value: -21.79
       objectReference: {fileID: 0}
     - target: {fileID: 2732664382375385659, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.79
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 2732664382375385659, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9026,6 +9032,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2732664382375385659, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762707818342578723, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2762707818342578723, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
       propertyPath: timeToIncrease
       value: 15
@@ -9038,6 +9052,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1872809062}
+    - target: {fileID: 3718239157606006704, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
+      propertyPath: isFlipped
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3829262634303324760, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
       propertyPath: m_Name
       value: Char2
@@ -9048,6 +9066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8021634369122489232, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
+    - {fileID: 2762707818342578723, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2732664382375385659, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
@@ -9057,6 +9076,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3829262634303324760, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2015131382}
+    - targetCorrespondingSourceObject: {fileID: 3829262634303324760, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2015131391}
   m_SourcePrefab: {fileID: 100100000, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
 --- !u!1 &2015131380 stripped
 GameObject:
@@ -9100,6 +9122,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2732664382375385659, guid: 3d039ab5daeb22d47a0b9ccb81bee8cb, type: 3}
   m_PrefabInstance: {fileID: 2015131379}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2015131391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015131380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94ea6a75dbe7ec4bad085e266504780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossHealthBarSprite: {fileID: 0}
+  healthBarName: empty health bar
+  health: 150
+  deathEffect: {fileID: 0}
+  isInvulnerable: 0
+  bossBoundaryWalls: {fileID: 1036503692}
+  decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 1058730663}
+  timeToIncrease: 12
 --- !u!4 &2056321209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5459056093397535871, guid: c6e381d906481a84ba76b6d3ae835869, type: 3}
@@ -9261,7 +9304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 4d9e06b00b3f44278a386bc33095344c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.14
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 4d9e06b00b3f44278a386bc33095344c, type: 3}
       propertyPath: m_LocalScale.y
@@ -9273,11 +9316,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 4d9e06b00b3f44278a386bc33095344c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.93
+      value: -20.24
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 4d9e06b00b3f44278a386bc33095344c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 4d9e06b00b3f44278a386bc33095344c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9313,7 +9356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 4d9e06b00b3f44278a386bc33095344c, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6353377721804257713, guid: 4d9e06b00b3f44278a386bc33095344c, type: 3}
       propertyPath: m_Layer
@@ -9403,10 +9446,10 @@ PrefabInstance:
       addedObject: {fileID: 512598554}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 4d9e06b00b3f44278a386bc33095344c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 512598553}
+      addedObject: {fileID: 512598552}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 4d9e06b00b3f44278a386bc33095344c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 512598552}
+      addedObject: {fileID: 512598559}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 4d9e06b00b3f44278a386bc33095344c, type: 3}
 --- !u!1 &2077313647
 GameObject:
