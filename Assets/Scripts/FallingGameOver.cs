@@ -15,7 +15,7 @@ public class FallingGameOver : MonoBehaviour
         {
 //            gameTimer.currentTime = 0f;
             Debug.Log("Game Over");
-//            Time.timeScale = 0f; // Pause the game
+            Time.timeScale = 0f; // Pause the game
             // Game over logic here
             if (collision.transform.rotation.z == 0)
                 collision.transform.Rotate(0, 0, 90);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SceneChangeTrigger : MonoBehaviour
 {
     [SerializeField] private string sceneToLoad;
+    float timeReset;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -13,6 +14,11 @@ public class SceneChangeTrigger : MonoBehaviour
             ChangeScene();
         }
     }
+    void Start()
+    {
+        Time.timeScale = 1f; // Ensure the game is running at normal speed
+        timeReset = gameTimer.currentTime;
+    }
     public void ChangeScene()
     {
         // Load the specified scene
@@ -20,6 +26,7 @@ public class SceneChangeTrigger : MonoBehaviour
     }
     public void Reset()
     {
+        gameTimer.currentTime = timeReset;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }
