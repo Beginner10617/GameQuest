@@ -19,7 +19,6 @@ public class PlayerShoot : MonoBehaviour
         if (timer >= timeInBetweenBullets && InputManager.shootIsHeld > 0)
         {
             GameObject b = Instantiate(bullet, shootPosition.position, Quaternion.identity);
-            
             Rigidbody2D rb = b.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
