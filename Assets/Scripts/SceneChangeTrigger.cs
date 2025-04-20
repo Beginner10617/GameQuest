@@ -84,7 +84,6 @@ public class SceneChangeTrigger : MonoBehaviour
     }
     void GoToNextScene()
     {
-        transform.eulerAngles = new Vector3(0, 0, 90);
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneToLoad);
     }
     public void Reset()
