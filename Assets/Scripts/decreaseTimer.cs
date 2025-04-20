@@ -7,15 +7,27 @@ public class decreaseTimer : MonoBehaviour
     [SerializeField] private float timeToDecrease = 20f; // Time to decrease the timer by 5 seconds
     [SerializeField] private GameObject decreaseEffectPrefab; // Prefab for the effect
     [SerializeField] public RectTransform effectSpawnPoint; // Point where the effect will be spawned
+    [SerializeField] public AudioSource _audioSource;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
             SpawnDecreaseEffect();
             DecreaseTimer();
-            Destroy(gameObject);
+
+            StartCoroutine(PlayAndDestroy());
+            Debug.Log("pLAYEd");
+            //Destroy(gameObject);
         }   
         
+    }
+    IEnumerator PlayAndDestroy()
+    {
+        _audioSource.pitch = 2.0f;
+        _audioSource.Play();
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(_audioSource.clip.length);
+        Destroy(gameObject); // destroys only the component
     }
     public void DecreaseTimer()
     {
