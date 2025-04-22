@@ -21,6 +21,8 @@ public class Interaction : MonoBehaviour
     private bool AutoType;
     [SerializeField]
     private float autoTypeWaitTime;
+    [SerializeField]
+    private bool disableAfterInteraction;
     public RawImage rawImage;
     public TMP_Text speakerName;
     public bool stopPlayer;
@@ -48,7 +50,8 @@ public class Interaction : MonoBehaviour
         
         dialoguePanel.SetActive(false);
         player.GetComponent<PlayerMovement>().enabled = true;
-        GetComponent<BoxCollider2D>().enabled = false;
+        if(disableAfterInteraction)
+            GetComponent<BoxCollider2D>().enabled = false;
     }
     public void NextLine()
     {
@@ -119,5 +122,13 @@ public class Interaction : MonoBehaviour
             dialoguePanel.SetActive(false);
             zeroText();
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        OnTriggerEnter2D(collision.collider);
+    } 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        OnTriggerExit2D(collision.collider);
     }
 }
