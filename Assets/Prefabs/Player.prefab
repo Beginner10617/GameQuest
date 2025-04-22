@@ -211,7 +211,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: fb8f5884cca0db140bb00f1ef4509e6c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMovementStats: {fileID: 11400000, guid: 8a8f78a040b4eeb4fa2097184f4194b6, type: 2}
   _feetCol: {fileID: 2822972339731709431}
-  _bodyCol: {fileID: 567458812915752211}
+  _bodyCol: {fileID: 4378758535755280475}
   animator: {fileID: 2914376206085460938}
 --- !u!114 &2020017072402779606
 MonoBehaviour:
@@ -917,7 +917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5915166417350577230}
-  - component: {fileID: 567458812915752211}
+  - component: {fileID: 4378758535755280475}
   m_Layer: 6
   m_Name: Feet
   m_TagString: Player
@@ -940,8 +940,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5757849715324492278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &567458812915752211
-BoxCollider2D:
+--- !u!58 &4378758535755280475
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -972,19 +972,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -3.1}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: -3}
   serializedVersion: 2
-  m_Size: {x: 1.1731406, y: 0.8777828}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!1 &5245537202406313255
 GameObject:
   m_ObjectHideFlags: 0

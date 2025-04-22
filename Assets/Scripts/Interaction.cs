@@ -16,14 +16,20 @@ public class Interaction : MonoBehaviour
     [SerializeField]
     public float wordSpeed;
     [SerializeField]
-    private bool playerClose;
+    public GameObject player;
+    [SerializeField]
+    private bool AutoType;
+    [SerializeField]
+    private float autoTypeWaitTime;
     public RawImage rawImage;
     public TMP_Text speakerName;
+    public bool stopPlayer;
 
     private int index;
     // Start is called before the first frame update
     void Start()
     {
+        index = 0;
         dialoguePanel.SetActive(false);
     }
 
@@ -41,6 +47,8 @@ public class Interaction : MonoBehaviour
         index = 0;
         
         dialoguePanel.SetActive(false);
+        player.GetComponent<PlayerMovement>().enabled = true;
+        GetComponent<BoxCollider2D>().enabled = false;
     }
     public void NextLine()
     {
@@ -59,20 +67,36 @@ public class Interaction : MonoBehaviour
     IEnumerator Typing()
     {
         //istyping = true;
-        rawImage.texture = speakerImage[index];
+        try{
+            rawImage.texture = speakerImage[index];
+        }
+        catch
+        {
+            Debug.Log("No image found");
+        }
         Debug.Log(index);
-        speakerName.text = speaker[index];
+        try{
+            speakerName.text = speaker[index];
+        }
+        catch
+        {
+            Debug.Log("No speaker found");
+        }
         int i = index;
         foreach (char letter in dialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(wordSpeed);
+            yield return new WaitForSeconds(1/wordSpeed);
             if (i != index)
             {
                 break;
             }
         }
-
+        if (AutoType)
+        {
+            yield return new WaitForSeconds(autoTypeWaitTime);
+            NextLine();
+        }
         //istyping = false;
     }
 
@@ -80,14 +104,19 @@ public class Interaction : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            playerClose = true;
+            dialoguePanel.SetActive(true);
+            player.GetComponent<PlayerMovement>().animator.SetFloat("Speed", 0);
+            player.GetComponent<PlayerMovement>().rb.velocity = Vector2.zero;
+            player.GetComponent<PlayerMovement>().enabled = false;
+            index = -1;
+            NextLine();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            playerClose = false;
+            dialoguePanel.SetActive(false);
             zeroText();
         }
     }

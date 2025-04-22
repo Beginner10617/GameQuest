@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public PlayerMovementStats _playerMovementStats;
     [SerializeField] private Collider2D _feetCol;
     [SerializeField] private Collider2D _bodyCol;
-    [SerializeField] private Animator animator;
-    private Rigidbody2D rb;
+    [SerializeField] public Animator animator;
+    public Rigidbody2D rb;
 
     private Vector2 moveVelocity;
     private bool isFacingRight;
