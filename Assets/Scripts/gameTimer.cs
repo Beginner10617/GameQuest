@@ -47,7 +47,7 @@ public class gameTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(currentTime + "s left");
+        //Debug.Log(currentTime + "s left");
         if(currentTime <= 0f)
         {
             timerImage.fillAmount = 0f;
