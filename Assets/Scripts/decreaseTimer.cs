@@ -16,16 +16,21 @@ public class decreaseTimer : MonoBehaviour
             DecreaseTimer();
 
             StartCoroutine(PlayAndDestroy());
-            Debug.Log("pLAYEd");
+           
             //Destroy(gameObject);
         }   
-        
+        else if(collision.gameObject.tag == "Ground")
+        {
+            StartCoroutine(PlayAndDestroy());
+        }
     }
     IEnumerator PlayAndDestroy()
     {
         _audioSource.pitch = 2.0f;
         _audioSource.Play();
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        try { gameObject.GetComponent<BoxCollider2D>().enabled = false; }
+        catch { }
         yield return new WaitForSeconds(_audioSource.clip.length);
         Destroy(gameObject); // destroys only the component
     }
