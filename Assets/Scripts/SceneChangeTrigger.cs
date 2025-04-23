@@ -14,7 +14,7 @@ public class SceneChangeTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            doorOpenPrompt.SetActive(true);
+            if(isDoor) doorOpenPrompt.SetActive(true);
             if (InputManager.openDoorPressed)
             {
                 ChangeScene();
@@ -25,7 +25,7 @@ public class SceneChangeTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            doorOpenPrompt.SetActive(false);
+            if(isDoor) doorOpenPrompt.SetActive(false);
         
             if (InputManager.openDoorPressed)
             {
@@ -48,7 +48,7 @@ public class SceneChangeTrigger : MonoBehaviour
         Time.timeScale = 1f; // Ensure the game is running at normal speed
         timeReset = gameTimer.currentTime;
         audioSource = GetComponent<AudioSource>();
-        doorOpenPrompt.SetActive(false); // Hide the prompt at the start
+        if(isDoor) doorOpenPrompt.SetActive(false); // Hide the prompt at the start
     }
     private IEnumerator WaitForSoundAndChangeScene()
     {

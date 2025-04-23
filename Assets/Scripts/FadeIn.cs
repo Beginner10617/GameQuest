@@ -25,5 +25,6 @@ public class SceneFader : MonoBehaviour
             yield return null;
         }
         fadeImage.color = new Color(color.r, color.g, color.b, 0f);
+        fadeImage.gameObject.SetActive(false); // Hide the image after fading out
     }
 }

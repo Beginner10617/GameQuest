@@ -26,7 +26,8 @@ public class Interaction : MonoBehaviour
     public RawImage rawImage;
     public TMP_Text speakerName;
     public bool stopPlayer;
-
+    [SerializeField]
+    private GameObject[] enableObjectsAfterInteraction;
     private int index;
     // Start is called before the first frame update
     void Start()
@@ -52,6 +53,10 @@ public class Interaction : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = true;
         if(disableAfterInteraction)
             GetComponent<BoxCollider2D>().enabled = false;
+        foreach (GameObject obj in enableObjectsAfterInteraction)
+        {
+            obj.SetActive(true);
+        }
     }
     public void NextLine()
     {
@@ -75,15 +80,15 @@ public class Interaction : MonoBehaviour
         }
         catch
         {
-            Debug.Log("No image found");
+            //Debug.Log("No image found");
         }
-        Debug.Log(index);
+        //Debug.Log(index);
         try{
             speakerName.text = speaker[index];
         }
         catch
         {
-            Debug.Log("No speaker found");
+            //Debug.Log("No speaker found");
         }
         int i = index;
         foreach (char letter in dialogue[index].ToCharArray())
