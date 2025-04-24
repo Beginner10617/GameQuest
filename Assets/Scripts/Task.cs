@@ -1,6 +1,6 @@
 using UnityEngine;
-class Task {
-    public string name;
+class Task : MonoBehaviour {
+    public string Name;
     public int timeSlots;
     public int stressChange;
     public Sprite icon;

@@ -28,7 +28,10 @@ public class Interaction : MonoBehaviour
     public bool stopPlayer;
     [SerializeField]
     private GameObject[] enableObjectsAfterInteraction;
+    [SerializeField]
+    private GameObject[] disableObjectsBeforeInteraction;
     private int index;
+    private bool istyping = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,11 @@ public class Interaction : MonoBehaviour
     }
     public void NextLine()
     {
+        if(istyping)
+        {
+            istyping = false;
+            dialogueText.text = dialogue[index];
+        }
         if (index < dialogue.Length - 1)
         {
             index++;
@@ -77,7 +85,7 @@ public class Interaction : MonoBehaviour
 
     IEnumerator Typing()
     {
-        //istyping = true;
+        istyping = true;
         try{
             rawImage.texture = speakerImage[index];
         }
@@ -96,6 +104,11 @@ public class Interaction : MonoBehaviour
         int i = index;
         foreach (char letter in dialogue[index].ToCharArray())
         {
+            if(istyping == false)
+            {
+                istyping = true;
+                break;
+            }
             dialogueText.text += letter;
             yield return new WaitForSeconds(1/wordSpeed);
             if (i != index)
@@ -103,18 +116,22 @@ public class Interaction : MonoBehaviour
                 break;
             }
         }
-        if (AutoType)
+        if (AutoType && istyping)
         {
             yield return new WaitForSeconds(autoTypeWaitTime);
+            istyping = false;
             NextLine();
         }
-        //istyping = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            foreach (GameObject obj in disableObjectsBeforeInteraction)
+            {
+                obj.SetActive(false);
+            }
             StartDialogues();
         }
     }
