@@ -43,7 +43,11 @@ public class gameTimer : MonoBehaviour
             currentTime--;
         }
     }
-
+    void OnEnable()
+    {
+        if(isTimerEnabled)
+            StartCoroutine(TimerUpdater());        
+    }
     // Update is called once per frame
     void Update()
     {

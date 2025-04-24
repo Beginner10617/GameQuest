@@ -70,6 +70,7 @@ public class Interaction : MonoBehaviour
         {
             istyping = false;
             dialogueText.text = dialogue[index];
+            return;
         }
         if (index < dialogue.Length - 1)
         {

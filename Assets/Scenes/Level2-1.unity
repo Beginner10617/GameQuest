@@ -7367,8 +7367,12 @@ MonoBehaviour:
   rawImage: {fileID: 738065640}
   speakerName: {fileID: 2134960415}
   stopPlayer: 0
-  enableObjectsAfterInteraction: []
-  disableObjectsBeforeInteraction: []
+  enableObjectsAfterInteraction:
+  - {fileID: 3770398631079042827}
+  - {fileID: 7481300797232970955}
+  disableObjectsBeforeInteraction:
+  - {fileID: 3770398631079042827}
+  - {fileID: 7481300797232970955}
 --- !u!50 &631591720
 Rigidbody2D:
   serializedVersion: 4
@@ -15998,8 +16002,12 @@ MonoBehaviour:
   rawImage: {fileID: 1013006926}
   speakerName: {fileID: 1316682782}
   stopPlayer: 0
-  enableObjectsAfterInteraction: []
-  disableObjectsBeforeInteraction: []
+  enableObjectsAfterInteraction:
+  - {fileID: 3770398631079042827}
+  - {fileID: 7481300797232970955}
+  disableObjectsBeforeInteraction:
+  - {fileID: 3770398631079042827}
+  - {fileID: 7481300797232970955}
 --- !u!1 &1298005545
 GameObject:
   m_ObjectHideFlags: 0
@@ -19324,6 +19332,8 @@ MonoBehaviour:
   enableObjectsAfterInteraction:
   - {fileID: 254659531}
   - {fileID: 871252582}
+  - {fileID: 3770398631079042827}
+  - {fileID: 7481300797232970955}
   disableObjectsBeforeInteraction:
   - {fileID: 3770398631079042827}
   - {fileID: 7481300797232970955}
@@ -51663,7 +51673,7 @@ MonoBehaviour:
   timerImage: {fileID: 3839082756031384150}
   timerText: {fileID: 5368685673180602334}
   totalTime: 150
-  restartTimerOnStart: 0
+  restartTimerOnStart: 1
   gameOverUI: {fileID: 3926384319092188755}
   isTimerEnabled: 1
 --- !u!4 &7399132991155758996
