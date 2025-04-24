@@ -29022,6 +29022,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7880842284308596192, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
+      propertyPath: totalTime
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880842284308596192, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 1195519454835687675}

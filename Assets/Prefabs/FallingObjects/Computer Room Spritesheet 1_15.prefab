@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6380254941404718383}
   - component: {fileID: -9055707571822656966}
   - component: {fileID: -2938183355067995672}
+  - component: {fileID: -7227675566724747322}
   m_Layer: 0
   m_Name: Computer Room Spritesheet 1_15
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_Sprite: {fileID: -1914084094, guid: ca572d52e89834d779c21aacb55db298, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -255,3 +256,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-7227675566724747322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5696424596660694224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8a1691030b98d418696aef543857fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDecrease: 20
+  decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 0}
+  _audioSource: {fileID: -6380254941404718383}
