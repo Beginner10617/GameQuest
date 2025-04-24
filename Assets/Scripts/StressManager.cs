@@ -1,3 +1,4 @@
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,8 @@ public class StressManager : MonoBehaviour
     public ClipBoard[] clipBoard;
     private Slider stressSlider;
     public GameObject[] gameOverObjects;
+    [SerializeField]
+    private Interaction step2End;
     void Start()
     {
         clipBoard = FindObjectsOfType<ClipBoard>();
@@ -29,12 +32,32 @@ public class StressManager : MonoBehaviour
         {
             stressLevel = 0;
         }
+        bool allTasksDone = true;
+        bool educated = false;
         foreach (var item in clipBoard)
         {
             if(item.clipedObject != null)
             {
+                if(item.clipedObject.GetComponent<Task>().isEducated)
+                {
+                    educated = true;
+                }
                 stressLevel += Time.deltaTime * item.clipedObject.GetComponent<Task>().stressChange;
             }
+            else
+            {
+                allTasksDone = false;
+            }
+        }
+        if(allTasksDone && !educated)
+        {
+            step2End.dialogue = new string[1];
+            step2End.dialogue[0] = "That's why u get Fs";
+            step2End.disableAfterInteraction = true;
+        }
+        else if(allTasksDone)
+        {
+            step2End.gameObject.SetActive(false);
         }
     }
 }

@@ -11,10 +11,6 @@ public class ClipBoard : MonoBehaviour
     public GameObject clipedObject;
     private bool colliderIsActive = false;
     
-    private void Awake()
-    {
-        dragAndDropHandler = FindObjectOfType<DragAndDrop>();
-    }
     void Start()
     {
         GetComponent<Collider2D>().enabled = colliderIsActive;   
@@ -45,7 +41,11 @@ public class ClipBoard : MonoBehaviour
             colliderIsActive = false;
             GetComponent<Collider2D>().enabled = colliderIsActive;
         }
-        if(dragAndDropHandler.selectedObject == clipedObject && colliderIsActive)
+        else if(clipedObject == null)
+        {
+            return;
+        }
+        else if(dragAndDropHandler.selectedObject == clipedObject && colliderIsActive)
         {
             colliderIsActive = false;
             GetComponent<Collider2D>().enabled = colliderIsActive;

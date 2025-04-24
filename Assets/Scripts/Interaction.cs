@@ -22,7 +22,7 @@ public class Interaction : MonoBehaviour
     [SerializeField]
     private float autoTypeWaitTime;
     [SerializeField]
-    private bool disableAfterInteraction;
+    public bool disableAfterInteraction;
     public RawImage rawImage;
     public TMP_Text speakerName;
     public bool stopPlayer;
