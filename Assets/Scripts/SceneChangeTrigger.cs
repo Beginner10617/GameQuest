@@ -9,7 +9,9 @@ public class SceneChangeTrigger : MonoBehaviour
     [SerializeField] private bool isDoor = false;
     [SerializeField] private AudioClip doorSound;
     [SerializeField] private GameObject doorOpenPrompt;
+    [SerializeField] private GameObject DoorObject;
     private AudioSource audioSource;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -17,7 +19,9 @@ public class SceneChangeTrigger : MonoBehaviour
             if(isDoor) doorOpenPrompt.SetActive(true);
             if (InputManager.openDoorPressed)
             {
+                if(DoorObject != null) DoorObject.SetActive(false);
                 ChangeScene();
+                
             }
         }
     }
@@ -29,6 +33,7 @@ public class SceneChangeTrigger : MonoBehaviour
         
             if (InputManager.openDoorPressed)
             {
+                if (DoorObject != null) DoorObject.SetActive(false);
                 ChangeScene();
             }
         }
@@ -39,6 +44,7 @@ public class SceneChangeTrigger : MonoBehaviour
         {
             if (InputManager.openDoorPressed)
             {
+                if (DoorObject != null) DoorObject.SetActive(false);
                 ChangeScene();
             }
         }

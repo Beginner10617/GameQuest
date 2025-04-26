@@ -6021,6 +6021,14 @@ PrefabInstance:
       propertyPath: restartTimerOnStart
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7880842284308596192, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
+      propertyPath: gameOverUI.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880842284308596192, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
+      propertyPath: gameOverUI.Array.data[0]
+      value: 
+      objectReference: {fileID: 1388837891}
     - target: {fileID: 8104685958138863834, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
       propertyPath: m_Pivot.x
       value: 0

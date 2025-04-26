@@ -263,8 +263,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Use W, A, S, D to move. \n- "Spacebar" to jump \n- Avoid the obstacles,
-    complete the run and meet your      princess'
+  m_text: '- Use W, A, S, D to move. ''Q'' to hit \n- "Spacebar" to jump \n- Avoid
+    the obstacles, complete the run and meet your      princess'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79918222c5eeb494793aa554a24a5eb8, type: 2}
   m_sharedMaterial: {fileID: 3540912491058673102, guid: 79918222c5eeb494793aa554a24a5eb8, type: 2}
@@ -7522,7 +7522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a9d23f7957a804bb15c3e6101bf755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: 
 --- !u!1 &2116420094
 GameObject:
   m_ObjectHideFlags: 0
