@@ -50609,7 +50609,7 @@ MonoBehaviour:
   totalTime: 150
   restartTimerOnStart: 1
   gameOverUI:
-  - {fileID: 0}
+  - {fileID: 3926384319092188755}
   isTimerEnabled: 1
 --- !u!4 &7399132991155758996
 Transform:
