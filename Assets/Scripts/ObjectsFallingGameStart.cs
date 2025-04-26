@@ -7,6 +7,7 @@ public class ObjectsFallingGameStart : MonoBehaviour
     public Spawner _spawner;
     public GameObject _boundaryOfGameArea;
     public Interaction _interaction;
+    public GameObject timer;
 
     public void startGame()
     {
@@ -19,5 +20,7 @@ public class ObjectsFallingGameStart : MonoBehaviour
         _spawner.enabled = false;
         _boundaryOfGameArea.SetActive(false);
         _interaction.StartDialogues();
+        timer.SetActive(false);
     }
+
 }
