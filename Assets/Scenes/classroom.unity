@@ -24953,7 +24953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: Cafetaria
   isDoor: 1
-  doorSound: {fileID: 8300000, guid: ab97359c669134857a82b14f6c07b86f, type: 3}
+  doorSound: {fileID: 8300000, guid: 5a70177cc8f7e1b428871e7046a290b0, type: 3}
   doorOpenPrompt: {fileID: 4598171650006211677}
   DoorObject: {fileID: 8134116698515480487}
 --- !u!1 &4598171650006211677
@@ -29190,6 +29190,14 @@ PrefabInstance:
       propertyPath: isTimerEnabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7880842284308596192, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
+      propertyPath: gameOverUI.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880842284308596192, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
+      propertyPath: gameOverUI.Array.data[0]
+      value: 
+      objectReference: {fileID: 1195519454835687675}
     - target: {fileID: 8104685958138863834, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
       propertyPath: m_Pivot.x
       value: 0

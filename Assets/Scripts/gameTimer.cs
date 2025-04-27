@@ -58,6 +58,7 @@ public class gameTimer : MonoBehaviour
         timerImage.fillAmount = 0f;
         timerText.text = "0";
         Time.timeScale = 0f;
+        StopAllCoroutines();
         Debug.Log("Game Over");
         gameOverUI[GameOverUIIndex].SetActive(true);
     }

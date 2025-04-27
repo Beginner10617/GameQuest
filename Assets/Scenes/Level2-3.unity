@@ -34992,7 +34992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: Level3
   isDoor: 1
-  doorSound: {fileID: 8300000, guid: ab97359c669134857a82b14f6c07b86f, type: 3}
+  doorSound: {fileID: 8300000, guid: 5a70177cc8f7e1b428871e7046a290b0, type: 3}
   doorOpenPrompt: {fileID: 539016863}
   DoorObject: {fileID: 4844377317499452024}
 --- !u!1 &2153523271544749696
