@@ -10,7 +10,8 @@ public class SpawnManager : MonoBehaviour
 
     public int NoOfPhonesToCollect = 6;
     public int CurrentPhones = 0;
-
+    public AudioSource phoneCollectSoundSource;
+    public AudioClip phoneCollectSound;
     public TextMeshProUGUI phoneText;
     private void Awake()
     {
@@ -23,6 +24,10 @@ public class SpawnManager : MonoBehaviour
     public void UpdatePhones()
     {
         CurrentPhones += 1;
+        if (phoneCollectSoundSource != null && phoneCollectSound != null)
+        {
+            phoneCollectSoundSource.PlayOneShot(phoneCollectSound);
+        }
         if(phoneText != null)
         {
             phoneText.text = CurrentPhones.ToString() + "/" + NoOfPhonesToCollect.ToString();
