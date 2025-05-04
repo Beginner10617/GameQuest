@@ -43,13 +43,14 @@ public class storyboard : MonoBehaviour
     {
         if (currentIndex < storyboards.Length)
         {
+            GameObject previous = null;
             GameObject next = storyboards[currentIndex];
             if (currentIndex > 0)
             {
-                GameObject previous = storyboards[currentIndex - 1];
-                StartCoroutine(FadeCanvasGroupAlpha(previous, false));
+                previous = storyboards[currentIndex - 1];
+                StartCoroutine(FadeCanvasGroupAlpha(previous, null, false));
             }
-            StartCoroutine(FadeCanvasGroupAlpha(next, true));
+            StartCoroutine(FadeCanvasGroupAlpha(next, previous, true));
             currentIndex++;
         }
         else
@@ -59,30 +60,42 @@ public class storyboard : MonoBehaviour
         }
     }
 
-    IEnumerator FadeCanvasGroupAlpha(GameObject obj, bool fadeIn)
+    IEnumerator FadeCanvasGroupAlpha(GameObject obj, GameObject previous, bool fadeIn)
     {
         Graphic graphic = obj.GetComponent<Graphic>();
         if (graphic == null)
             yield break;
 
-        Color originalColor = graphic.color;
-        float startAlpha = fadeIn ? 0f : originalColor.a;
-        float endAlpha = fadeIn ? originalColor.a : 0f;
+        float startAlpha = fadeIn ? 0f : 1f;
+        float endAlpha = fadeIn ? 1f : 0f;
 
         // Set initial alpha for fade-in
         if (fadeIn)
         {
-            Color newColor = originalColor;
+            Color newColor = graphic.color;
             newColor.a = 0f;
             graphic.color = newColor;
-            obj.SetActive(true);
         }
-
+        else
+        {
+            Color newColor = graphic.color;
+            newColor.a = 1f;
+            graphic.color = newColor;
+        }
+        if (previous != null)
+        {
+            // Wait for the previous storyboard to finish fading out
+            while (previous.activeSelf)
+            {
+                yield return null;
+            }
+        }
+        obj.SetActive(true);
         float timer = 0f;
         while (timer < fadeDuration)
         {
             float alpha = Mathf.Lerp(startAlpha, endAlpha, timer / fadeDuration);
-            Color newColor = originalColor;
+            Color newColor = graphic.color;
             newColor.a = alpha;
             graphic.color = newColor;
             timer += Time.deltaTime;
@@ -90,7 +103,7 @@ public class storyboard : MonoBehaviour
         }
 
         // Ensure final alpha is set
-        Color finalColor = originalColor;
+        Color finalColor = graphic.color;
         finalColor.a = endAlpha;
         graphic.color = finalColor;
         if (!fadeIn)
