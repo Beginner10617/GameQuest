@@ -7,6 +7,7 @@ public class StressManager : MonoBehaviour
 
     [Range(0, 100)] public int stressLevel = 40;
     public Slider stressSlider;
+    public GameObject[] gameOverObjects;
 
     void Awake()
     {
@@ -31,6 +32,22 @@ public class StressManager : MonoBehaviour
             stressSlider.value = stressLevel;
             Color sliderColor = Color.Lerp(Color.green, Color.red, stressLevel / 100f);
             stressSlider.fillRect.GetComponent<Image>().color = sliderColor;
+        }
+        if (stressLevel >= 100)
+        {
+            foreach (GameObject obj in gameOverObjects)
+            {
+                obj.SetActive(true);
+            }
+            Time.timeScale = 0;
+        }
+        else
+        {
+            foreach (GameObject obj in gameOverObjects)
+            {
+                obj.SetActive(false);
+            }
+            Time.timeScale = 1;
         }
     }
 

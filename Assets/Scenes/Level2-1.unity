@@ -18788,6 +18788,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stressLevel: 30
   stressSlider: {fileID: 1128511052}
+  gameOverObjects:
+  - {fileID: 3926384319092188755}
+  - {fileID: 676873099}
 --- !u!1 &1139855951
 GameObject:
   m_ObjectHideFlags: 0
