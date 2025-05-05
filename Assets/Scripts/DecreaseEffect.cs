@@ -40,7 +40,7 @@ public class DecreaseEffect : MonoBehaviour
         else
         {
         
-            gameTimer.currentTime -= timeToDecrease;
+            //gameTimer.currentTime -= timeToDecrease;
             Debug.Log("Decreased time by " + timeToDecrease + " seconds. Current time: " + gameTimer.currentTime);
             Destroy(gameObject);
         }

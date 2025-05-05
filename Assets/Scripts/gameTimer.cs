@@ -11,6 +11,8 @@ public class gameTimer : MonoBehaviour
     [SerializeField] private float totalTime;
     [SerializeField] private bool restartTimerOnStart = false;
     public static float currentTime;
+    public List<GameObject> gameOverUI;
+    public bool isTimerEnabled = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +20,23 @@ public class gameTimer : MonoBehaviour
         {
             currentTime = totalTime;
         }
+        foreach(GameObject g in gameOverUI)
+        {
+            g.SetActive(false);
+        }
+        
         timerText.text = currentTime.ToString();
-        StartCoroutine(TimerUpdater());
+        if(isTimerEnabled) StartCoroutine(TimerUpdater());
     }
-
+    public void DisableTimer()
+    {
+        isTimerEnabled = false;
+    }
+    public void EnableTimer()
+    {
+        isTimerEnabled = true;
+        Start();
+    }
     public IEnumerator TimerUpdater()
     {
         while(currentTime > 0f)
@@ -32,16 +47,27 @@ public class gameTimer : MonoBehaviour
             currentTime--;
         }
     }
-
+    void OnEnable()
+    {
+        if(isTimerEnabled)
+            StartCoroutine(TimerUpdater());        
+    }
     // Update is called once per frame
+    public void GameOver(int GameOverUIIndex)
+    {
+        timerImage.fillAmount = 0f;
+        timerText.text = "0";
+        Time.timeScale = 0f;
+        StopAllCoroutines();
+        Debug.Log("Game Over");
+        gameOverUI[GameOverUIIndex].SetActive(true);
+    }
     void Update()
     {
-        if(currentTime < 0f)
+        //Debug.Log(currentTime + "s left");
+        if(currentTime <= 0f)
         {
-            timerImage.fillAmount = 0f;
-            timerText.text = "0";
-            Time.timeScale = 0f;
-            Debug.Log("Game Over");
+            GameOver(0);
         }
     }
 }

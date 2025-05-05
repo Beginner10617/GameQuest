@@ -3,15 +3,15 @@ using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     [Header("Refrences")]
     public PlayerMovementStats _playerMovementStats;
     [SerializeField] private Collider2D _feetCol;
     [SerializeField] private Collider2D _bodyCol;
-    [SerializeField] private Animator animator;
-    private Rigidbody2D rb;
+    [SerializeField] public Animator animator;
+    public Rigidbody2D rb;
 
     private Vector2 moveVelocity;
     private bool isFacingRight;
@@ -45,6 +45,7 @@ class PlayerMovement : MonoBehaviour
 
     private float _fallSpeedYDampingChangeThreshold;
 
+    private bool movementIsEnabled = true;
     private void Start()
     {
         //_fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedDampingChangeThreshold;
@@ -66,18 +67,28 @@ class PlayerMovement : MonoBehaviour
     {
         CollisionCheck();
         Jump();
-        if (isGrounded)
+        if (movementIsEnabled)
         {
-            Move(_playerMovementStats.GroundAccleration, _playerMovementStats.GroundDeceleration, InputManager._movement);
+            
+            if (isGrounded)
+            {
+                Move(_playerMovementStats.GroundAccleration, _playerMovementStats.GroundDeceleration, InputManager._movement);
+            }
+            else
+            {
+                Move(_playerMovementStats.AirAccleration, _playerMovementStats.AirDeceleration, InputManager._movement);
+            }
         }
         else
         {
-            Move(_playerMovementStats.AirAccleration, _playerMovementStats.AirDeceleration, InputManager._movement);
+            moveVelocity = Vector2.zero;
         }
+        //Debug.LogWarning(moveVelocity);
+        
     }
     #region Movement
 
-    private void Move(float accleration, float decelration, Vector2 moveInput)
+    public void Move(float accleration, float decelration, Vector2 moveInput)
     {
         if ((moveInput != Vector2.zero))
         {
@@ -391,6 +402,22 @@ class PlayerMovement : MonoBehaviour
     {
         IsGrounded();
         //HeadCheck();
+    }
+    #endregion
+
+    #region Enable/Disable
+    public void EnableControls()
+    {
+        this.enabled = true;
+        movementIsEnabled = true;
+    }
+    public void DisableControls() 
+    { 
+        movementIsEnabled = false;
+        moveVelocity = Vector2.zero;
+        Move(_playerMovementStats.GroundAccleration, 10f, Vector2.zero);
+        this.enabled = false;
+
     }
     #endregion
 }

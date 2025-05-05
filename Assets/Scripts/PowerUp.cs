@@ -18,7 +18,7 @@ public class PowerUp : MonoBehaviour
             Debug.Log("Spawned increase effect");
             Destroy(gameObject);
         }
-    }
+    }//
 
     void SpawnIncreaseEffect()
     {
