@@ -8,6 +8,7 @@ public class MinionFightStart : MonoBehaviour
     [SerializeField] private GameObject boundary;
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject PowerUpMessage;
+    [SerializeField] private Interaction _interaction;
     private Queue<Animator> minionQueue = new Queue<Animator>();
     private Animator currentChasingMinion;
     private bool fightStarted = false;
@@ -42,11 +43,13 @@ public class MinionFightStart : MonoBehaviour
     {
         if (minionQueue.Count == 0)
         {
-            Debug.Log("All minions defeated.");
-
+            //Debug.Log("All minions defeated.");
+            _interaction.ManuallyTrigger();
             _player.GetComponent<PlayerShoot>().enabled = true;
-
-            StartCoroutine(PowerUpMessageObject());
+            boundary.SetActive(false);
+            
+            //yield return new WaitForSeconds(3);
+            //StartCoroutine(PowerUpMessageObject());
             yield break;
         }
 
@@ -71,6 +74,7 @@ public class MinionFightStart : MonoBehaviour
         if (anim == currentChasingMinion)
         {
             currentChasingMinion = null;
+            
         }
     }
 }

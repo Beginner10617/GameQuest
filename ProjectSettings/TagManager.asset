@@ -18,8 +18,8 @@ TagManager:
   - ShelveTop
   - Enemy
   - Ignore Collision
-  - 
-  - 
+  - EnemyBullet
+  - PlayerBullet
   - 
   - 
   - 
@@ -43,4 +43,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Minion1
+    uniqueID: 3399244473
+    locked: 0
+  - name: Minion2
+    uniqueID: 18037453
+    locked: 0
+  - name: Minion3
+    uniqueID: 2941452321
+    locked: 0
+  - name: Minion4
+    uniqueID: 1514736689
+    locked: 0
+  - name: Boss1
+    uniqueID: 3438578221
+    locked: 0
+  - name: Boss2
+    uniqueID: 2785513135
+    locked: 0
+  - name: Player
+    uniqueID: 2025069693
     locked: 0

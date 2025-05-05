@@ -8,6 +8,7 @@ public class decreaseTimer : MonoBehaviour
     [SerializeField] private GameObject decreaseEffectPrefab; // Prefab for the effect
     [SerializeField] public RectTransform effectSpawnPoint; // Point where the effect will be spawned
     [SerializeField] public AudioSource _audioSource;
+    [SerializeField] private bool haveAudio = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
@@ -26,13 +27,18 @@ public class decreaseTimer : MonoBehaviour
     }
     IEnumerator PlayAndDestroy()
     {
-        _audioSource.pitch = 2.0f;
-        _audioSource.Play();
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        try { gameObject.GetComponent<BoxCollider2D>().enabled = false; }
-        catch { }
-        yield return new WaitForSeconds(_audioSource.clip.length);
-        Destroy(gameObject); // destroys only the component
+        if (haveAudio)
+        {
+            _audioSource.pitch = 2.0f;
+            _audioSource.Play();
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+            try { gameObject.GetComponent<BoxCollider2D>().enabled = false; }
+            catch { }
+            yield return new WaitForSeconds(_audioSource.clip.length);
+            Destroy(gameObject);
+        }
+        else Destroy(gameObject); // destroys only the component
     }
     public void DecreaseTimer()
     {

@@ -13,6 +13,7 @@ public class startBossFight1 : MonoBehaviour
             animator.SetTrigger("StartBossFight");
             //boundaries[0].SetActive(false);
             boundary.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }

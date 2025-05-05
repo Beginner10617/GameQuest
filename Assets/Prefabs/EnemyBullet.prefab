@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2925755692363864490}
   - component: {fileID: 3782825019588635156}
   - component: {fileID: 3961051476186154293}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2304
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -164,3 +164,5 @@ MonoBehaviour:
   timeToDecrease: 15
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 0}
+  _audioSource: {fileID: 0}
+  haveAudio: 0

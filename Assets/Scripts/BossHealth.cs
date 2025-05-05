@@ -15,10 +15,18 @@ public class BossHealth : MonoBehaviour
 
     [SerializeField] private GameObject decreaseEffectPrefab; // Prefab for the effect
     [SerializeField] public RectTransform effectSpawnPoint;
+    [SerializeField] private Animator animator;
+    [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private Interaction _interaction;
+    private BoxCollider2D _collider;
     public float timeToIncrease = 30f;
 
     private void Start()
     {
+        if(_collider == null)
+        {
+            _collider = GetComponent<BoxCollider2D>();
+        }
         maxHealth = health;
         if(bossHealthBarSprite == null)
         {
@@ -75,8 +83,12 @@ public class BossHealth : MonoBehaviour
     void Die()
     {
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
-        
-        Destroy(gameObject);
+
+        //Destroy(gameObject);
+        animator.SetBool("IsConvinced", true);
+        isInvulnerable = true;
+        _collider.excludeLayers += playerLayer;
+        _interaction.ManuallyTrigger();
         gameTimer.currentTime += timeToIncrease;
         SpawnIncreaseEffect();
         bossBoundaryWalls.SetActive(false);

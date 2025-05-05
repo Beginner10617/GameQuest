@@ -32,6 +32,8 @@ public class Interaction : MonoBehaviour
     private GameObject[] disableObjectsBeforeInteraction;
     private int index;
     private bool istyping = false;
+    public bool isPowerUpInteraction = false;
+    [SerializeField] private GameObject PowerUpMessage;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,10 +47,29 @@ public class Interaction : MonoBehaviour
         
 
     }
+    public void ManuallyTrigger()
+    {
+            foreach (GameObject obj in disableObjectsBeforeInteraction)
+            {
+                obj.SetActive(false);
+            }
+            StartDialogues();
+        
+    }
+    IEnumerator PowerUpMessageObject()
+    {
+        PowerUpMessage.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        PowerUpMessage.SetActive(false);
+    }
 
     public void zeroText()
     {
         StopAllCoroutines();
+        if(isPowerUpInteraction)
+        {
+            if(PowerUpMessage != null) StartCoroutine(PowerUpMessageObject());
+        }
         dialogueText.text = "";
         index = 0;
         if(gameObject.TryGetComponent(out ObjectsFallingGameStart starter))
@@ -57,7 +78,8 @@ public class Interaction : MonoBehaviour
         }
         dialoguePanel.SetActive(false);
         player.GetComponent<PlayerMovement>().enabled = true;
-        if(disableAfterInteraction)
+        player.GetComponent<PlayerShoot>().enabled = true;
+        if (disableAfterInteraction)
             GetComponent<BoxCollider2D>().enabled = false;
         foreach (GameObject obj in enableObjectsAfterInteraction)
         {
@@ -142,6 +164,7 @@ public class Interaction : MonoBehaviour
         player.GetComponent<PlayerMovement>().animator.SetFloat("Speed", 0);
         player.GetComponent<PlayerMovement>().rb.velocity = Vector2.zero;
         player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<PlayerShoot>().enabled = false;
         index = -1;
         NextLine();
     }

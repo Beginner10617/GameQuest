@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1665550415709785339}
   - component: {fileID: 3782825019588635156}
   - component: {fileID: -3417232690865431301}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlayerBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1536
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -178,4 +178,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98ab1e7718fcae4bbf229d07ed568f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 40
+  bulletDamage: 35

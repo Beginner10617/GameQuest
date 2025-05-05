@@ -16,11 +16,14 @@ public class MinionHealth : MonoBehaviour
     [SerializeField] private GameObject decreaseEffectPrefab; // Prefab for the effect
     [SerializeField] public RectTransform effectSpawnPoint;
     [SerializeField] private Animator animator;
+    [SerializeField] private LayerMask playerLayer;
+    private BoxCollider2D _collider;
     public float timeToIncrease = 30f;
 
     public static event System.Action<MinionHealth> OnMinionDied;
     private void Start()
     {
+        if (_collider == null) _collider = GetComponent<BoxCollider2D>();
         maxHealth = health;
         if (bossHealthBarSprite == null)
         {
@@ -80,9 +83,11 @@ public class MinionHealth : MonoBehaviour
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
         //Destroy(gameObject);
         animator.SetBool("IsConvinced", true);
+        isInvulnerable = true;
+        _collider.excludeLayers += playerLayer;
         gameTimer.currentTime += timeToIncrease;
         SpawnIncreaseEffect();
-        bossBoundaryWalls.SetActive(false);
+        //bossBoundaryWalls.SetActive(false);
     }
 
     void SpawnIncreaseEffect()
