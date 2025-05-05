@@ -15,6 +15,7 @@ public class MinionHealth : MonoBehaviour
 
     [SerializeField] private GameObject decreaseEffectPrefab; // Prefab for the effect
     [SerializeField] public RectTransform effectSpawnPoint;
+    [SerializeField] private Animator animator;
     public float timeToIncrease = 30f;
 
     public static event System.Action<MinionHealth> OnMinionDied;
@@ -77,7 +78,8 @@ public class MinionHealth : MonoBehaviour
     {
         OnMinionDied?.Invoke(this);
         //Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        animator.SetBool("IsConvinced", true);
         gameTimer.currentTime += timeToIncrease;
         SpawnIncreaseEffect();
         bossBoundaryWalls.SetActive(false);

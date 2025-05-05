@@ -1404,6 +1404,7 @@ MonoBehaviour:
   bossBoundaryWalls: {fileID: 1036503692}
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 1058730663}
+  animator: {fileID: 175914483}
   timeToIncrease: 14
 --- !u!4 &206813683 stripped
 Transform:
@@ -3246,6 +3247,7 @@ MonoBehaviour:
   bossBoundaryWalls: {fileID: 1036503692}
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 1058730663}
+  animator: {fileID: 512598557}
   timeToIncrease: 10
 --- !u!1 &555616331
 GameObject:
@@ -5266,6 +5268,7 @@ MonoBehaviour:
   bossBoundaryWalls: {fileID: 1036503692}
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 1058730663}
+  animator: {fileID: 902884203}
   timeToIncrease: 15
 --- !u!1 &909090670
 GameObject:
@@ -6019,7 +6022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7880842284308596192, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
       propertyPath: restartTimerOnStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7880842284308596192, guid: 50cf0abed847a624db46a70372aba2aa, type: 3}
       propertyPath: gameOverUI.Array.size
@@ -10036,6 +10039,7 @@ MonoBehaviour:
   bossBoundaryWalls: {fileID: 1036503692}
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 1058730663}
+  animator: {fileID: 2015131386}
   timeToIncrease: 12
 --- !u!4 &2056321209 stripped
 Transform:
