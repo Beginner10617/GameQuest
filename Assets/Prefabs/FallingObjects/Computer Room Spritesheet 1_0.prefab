@@ -176,6 +176,7 @@ MonoBehaviour:
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 0}
   _audioSource: {fileID: 4402123947648480604}
+  haveAudio: 1
 --- !u!82 &4402123947648480604
 AudioSource:
   m_ObjectHideFlags: 0

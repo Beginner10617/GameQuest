@@ -46,9 +46,14 @@ public class PlayerMovement : MonoBehaviour
     private float _fallSpeedYDampingChangeThreshold;
 
     private bool movementIsEnabled = true;
+
+    // Audio Clips
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip jumpSound;
     private void Start()
     {
         //_fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedDampingChangeThreshold;
+        _audioSource = GetComponent<AudioSource>();
     }
     private void Awake() 
     {
@@ -356,6 +361,10 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(groundHit.collider.gameObject.name);
         if(groundHit.collider != null)
         {
+            if(isGrounded == false)
+            {
+                _audioSource.PlayOneShot(jumpSound);
+            }
             isGrounded = true;
         }
         else
