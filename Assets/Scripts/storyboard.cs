@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using System.Collections;
 public class storyboard : MonoBehaviour
 {
@@ -12,10 +13,18 @@ public class storyboard : MonoBehaviour
     private float timer = 0;
     private int currentIndex = 0;
     [SerializeField] private string nextSceneName;
-    
+    [SerializeField] private AudioClip backgroundMusic;
+    [SerializeField] private AudioMixerGroup audioMixerGroup;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        if (backgroundMusic != null)
+        {
+            audioSource.clip = backgroundMusic;
+            audioSource.Play();
+        }
         for (int i = 0; i < storyboards.Length; i++)
         {
             storyboards[i].SetActive(false);
@@ -41,6 +50,7 @@ public class storyboard : MonoBehaviour
     }
     void NextStoryboard()
     {
+        Debug.Log(currentIndex);
         if (currentIndex < storyboards.Length)
         {
             GameObject previous = null;
@@ -98,6 +108,12 @@ public class storyboard : MonoBehaviour
             Color newColor = graphic.color;
             newColor.a = alpha;
             graphic.color = newColor;
+            if(obj == storyboards[storyboards.Length - 1])
+            {
+                // Set the audio mixer group volume based on the alpha value
+                float volume = Mathf.Lerp(-80f, 0, alpha);
+                audioMixerGroup.audioMixer.SetFloat("Volume", volume);
+            }
             timer += Time.deltaTime;
             yield return null;
         }
