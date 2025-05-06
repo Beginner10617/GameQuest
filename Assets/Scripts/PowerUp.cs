@@ -7,6 +7,12 @@ public class PowerUp : MonoBehaviour
     [SerializeField] private float timeToIncrease = 20f; // Time to decrease the timer by 5 seconds
     [SerializeField] private GameObject decreaseEffectPrefab; // Prefab for the effect
     [SerializeField] public RectTransform effectSpawnPoint; // Point where the effect will be spawned
+    [SerializeField] private AudioClip collectSound; // Sound to play when the power-up is collected
+    private AudioSource _audioSource; // Reference to the AudioSource component
+    private void Start()
+    {
+        _audioSource = Camera.main.GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Collision detected with: " + collision.gameObject.name);
@@ -16,6 +22,11 @@ public class PowerUp : MonoBehaviour
             Debug.Log("Increased time by " + timeToIncrease + " seconds. Current time: " + gameTimer.currentTime);
             SpawnIncreaseEffect();
             Debug.Log("Spawned increase effect");
+            if (collectSound != null)
+            {
+                _audioSource.PlayOneShot(collectSound);
+                Debug.Log("Played collect sound");
+            }
             Destroy(gameObject);
         }
     }//

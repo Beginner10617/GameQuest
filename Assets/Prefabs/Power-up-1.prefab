@@ -174,3 +174,4 @@ MonoBehaviour:
   timeToIncrease: 30
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 0}
+  collectSound: {fileID: 8300000, guid: 260c28875fd4649f5b00b19ce3134432, type: 3}
