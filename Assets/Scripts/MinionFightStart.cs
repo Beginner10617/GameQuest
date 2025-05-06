@@ -45,7 +45,6 @@ public class MinionFightStart : MonoBehaviour
         {
             //Debug.Log("All minions defeated.");
             _interaction.ManuallyTrigger();
-            _player.GetComponent<PlayerShoot>().enabled = true;
             boundary.SetActive(false);
             
             //yield return new WaitForSeconds(3);

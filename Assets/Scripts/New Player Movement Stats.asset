@@ -32,8 +32,8 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 136
-  GroundDetectionRayLength: 0.37
-  HeadDetectionRayLength: 0.02
+  GroundDetectionRayLength: 0.3
+  HeadDetectionRayLength: 0.1
   HeadWidth: 0.75
   ShowWalkJumpArc: 0
   ShowRunJumpArc: 0

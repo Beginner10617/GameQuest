@@ -131,6 +131,9 @@ MonoBehaviour:
   bullet: {fileID: 0}
   bulletSpeed: 50
   timeInBetweenBullets: 0.1
+  StoneUI: {fileID: 0}
+  ammoUI: {fileID: 0}
+  ammo: 10
 --- !u!58 &3782825019588635156
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -178,4 +181,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98ab1e7718fcae4bbf229d07ed568f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 35
+  bulletDamage: 25

@@ -59,6 +59,7 @@ public class Interaction : MonoBehaviour
     IEnumerator PowerUpMessageObject()
     {
         PowerUpMessage.SetActive(true);
+        player.GetComponent<PlayerShoot>().enabled = true;
         yield return new WaitForSeconds(3f);
         PowerUpMessage.SetActive(false);
     }
