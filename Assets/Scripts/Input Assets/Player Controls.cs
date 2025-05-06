@@ -89,6 +89,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""d25d71c8-3791-4204-b2bb-84339b731588"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -289,6 +298,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""OpenDoor"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d4c7ef73-2e18-4e82-be92-4234f0914a67"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -352,6 +372,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_PlayerMovements_Interact = m_PlayerMovements.FindAction("Interact", throwIfNotFound: true);
         m_PlayerMovements_Mukka = m_PlayerMovements.FindAction("Mukka", throwIfNotFound: true);
         m_PlayerMovements_OpenDoor = m_PlayerMovements.FindAction("OpenDoor", throwIfNotFound: true);
+        m_PlayerMovements_Pause = m_PlayerMovements.FindAction("Pause", throwIfNotFound: true);
         // Gameplay
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
         m_Gameplay_Point = m_Gameplay.FindAction("Point", throwIfNotFound: true);
@@ -430,6 +451,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerMovements_Interact;
     private readonly InputAction m_PlayerMovements_Mukka;
     private readonly InputAction m_PlayerMovements_OpenDoor;
+    private readonly InputAction m_PlayerMovements_Pause;
     public struct PlayerMovementsActions
     {
         private @PlayerControls m_Wrapper;
@@ -441,6 +463,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_PlayerMovements_Interact;
         public InputAction @Mukka => m_Wrapper.m_PlayerMovements_Mukka;
         public InputAction @OpenDoor => m_Wrapper.m_PlayerMovements_OpenDoor;
+        public InputAction @Pause => m_Wrapper.m_PlayerMovements_Pause;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMovements; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -471,6 +494,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @OpenDoor.started += instance.OnOpenDoor;
             @OpenDoor.performed += instance.OnOpenDoor;
             @OpenDoor.canceled += instance.OnOpenDoor;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IPlayerMovementsActions instance)
@@ -496,6 +522,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @OpenDoor.started -= instance.OnOpenDoor;
             @OpenDoor.performed -= instance.OnOpenDoor;
             @OpenDoor.canceled -= instance.OnOpenDoor;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IPlayerMovementsActions instance)
@@ -576,6 +605,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnMukka(InputAction.CallbackContext context);
         void OnOpenDoor(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IGameplayActions
     {
