@@ -407,7 +407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "He thought they\u2019d have our first kiss\u2014but she hugged him instead,\Lthen
+  m_text: "He thought they\u2019d have their first kiss\u2014but she hugged him instead,\Lthen
     rated it, like always. It was awkward. It was them."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
