@@ -111,7 +111,7 @@ public class storyboard : MonoBehaviour
             if(obj == storyboards[storyboards.Length - 1])
             {
                 // Set the audio mixer group volume based on the alpha value
-                float volume = Mathf.Lerp(-80f, 0, alpha);
+                float volume = Mathf.Lerp(0, -80f, alpha);
                 audioMixerGroup.audioMixer.SetFloat("Volume", volume);
             }
             timer += Time.deltaTime;
