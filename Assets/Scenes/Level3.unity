@@ -1606,7 +1606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d98810950b29c4e97af61740623c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 9
+  damage: 12
   range: 8.14
   colliderSize: 1.65
   _collider: {fileID: 175914481}
@@ -3872,7 +3872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d98810950b29c4e97af61740623c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 8
+  damage: 10
   range: 7.01
   colliderSize: 1.12
   _collider: {fileID: 512598556}
@@ -5218,6 +5218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
+  lastAttackTime: -Infinity
 --- !u!4 &682993776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5116599351006913442, guid: 5f5447766b4e9a34897566e07e41aa64, type: 3}
@@ -6382,7 +6383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d98810950b29c4e97af61740623c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 6
+  damage: 8
   range: 5.42
   colliderSize: 1.49
   _collider: {fileID: 902884206}
@@ -12566,7 +12567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d98810950b29c4e97af61740623c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 7
+  damage: 9
   range: 9.6
   colliderSize: 1.46
   _collider: {fileID: 2015131381}
