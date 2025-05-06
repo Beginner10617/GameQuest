@@ -7,6 +7,13 @@ public class PlacedObjectTrigger : MonoBehaviour
     [SerializeField]
     private PlacingPairs placingPairs;
     private bool isTriggered = false;
+    [SerializeField]
+    private AudioClip soundEffect;
+    private AudioSource audioSource;
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Draggable"))
@@ -15,6 +22,10 @@ public class PlacedObjectTrigger : MonoBehaviour
             {
                 other.gameObject.SetActive(false);
                 gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1f);
+                if (soundEffect != null && audioSource != null)
+                {
+                    audioSource.PlayOneShot(soundEffect);
+                }
                 isTriggered = true;
             }
         }

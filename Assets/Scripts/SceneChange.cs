@@ -12,6 +12,7 @@ public class SceneChange : MonoBehaviour
     }
     public void ResetScene()
     {
+        Time.timeScale = 1f; // Ensure the game is running at normal speed
         SceneManager.LoadScene(SceneManager.GetActiveScene().name.ToString());
     }
     public void ExitGame()
