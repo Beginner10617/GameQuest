@@ -9772,9 +9772,8 @@ MonoBehaviour:
   dialoguePanel: {fileID: 342929182}
   dialogueText: {fileID: 1436950080}
   dialogue:
-  - This Room looks awfully silent....
-  - Is it the calm before the storm?!?!
-  - '*sighs* Nothing I can do lets just proceed.....'
+  - Am I forgetting something???....
+  - I don't know maybe just the stress... Let me focus on my work
   speakerImage:
   - {fileID: 2800000, guid: 3c4431309b7e547c29c0b221c754bebe, type: 3}
   - {fileID: 2800000, guid: 3c4431309b7e547c29c0b221c754bebe, type: 3}
@@ -25642,9 +25641,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 457248776}
   dialogueText: {fileID: 1173668872}
   dialogue:
-  - Ahh Finally, It's Over!!!!!!!
-  - I dodged almost all of them....
-  - Anyways, Who the hell put up stuff there anyways?!!!!!
+  - " Ahh, thank god I spoke to her. I feel so much\_better\_now."
   speakerImage:
   - {fileID: 2800000, guid: 3c4431309b7e547c29c0b221c754bebe, type: 3}
   - {fileID: 2800000, guid: 3c4431309b7e547c29c0b221c754bebe, type: 3}
@@ -29106,9 +29103,9 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1596614601}
   dialogueText: {fileID: 1602663836}
   dialogue:
-  - What?!?!?! OMG!!!
-  - There is soo much work stuff!!!!!
-  - I need to strike a balance between personal life and work.
+  - 'What?!?!?! Oh god!!! '
+  - I had so much work to do, I completely forgot to call BuB2!!!
+  - "I should really pick up her calls\u2026.before she kills me."
   speakerImage:
   - {fileID: 2800000, guid: 3c4431309b7e547c29c0b221c754bebe, type: 3}
   - {fileID: 2800000, guid: 3c4431309b7e547c29c0b221c754bebe, type: 3}
