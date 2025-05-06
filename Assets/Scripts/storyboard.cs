@@ -30,7 +30,10 @@ public class storyboard : MonoBehaviour
             storyboards[i].SetActive(false);
         }
     }
-
+    public void Skip()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
+    }
     // Update is called once per frame
     void Update()
     {
