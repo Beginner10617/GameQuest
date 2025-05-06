@@ -51,7 +51,7 @@ public class Spawner : MonoBehaviour
     GameObject ChooseBiasedObject()
     {
         // Increase the chance of spawning the phone
-        float phoneSpawnChance = 0.5f; // 50% chance to spawn phone
+        float phoneSpawnChance = 0.25f; // 50% chance to spawn phone
 
         if (Random.value < phoneSpawnChance)
         {

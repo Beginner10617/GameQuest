@@ -8646,7 +8646,7 @@ MonoBehaviour:
   xMax: 6.5
   effectSpawnPoint: {fileID: 1820707270}
   spawnCount: 0
-  maxSpawns: 40
+  maxSpawns: 50
   ObjectsFallingGameStart: {fileID: 1660929109}
   FlipPhoneUI: {fileID: 696802401}
   playerTransform: {fileID: 1541277260}
