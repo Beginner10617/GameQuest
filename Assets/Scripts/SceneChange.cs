@@ -16,6 +16,7 @@ public class SceneChange : MonoBehaviour
     }
     public void ExitGame()
     {
+        gameTimer.currentTime = 150;
         Application.Quit();
     }
 }

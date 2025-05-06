@@ -13906,6 +13906,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2748993858968155690, guid: b563ddbfab7fcd64192854b20ba47cf1, type: 3}
+      propertyPath: timeReset
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 6238746587899075912, guid: b563ddbfab7fcd64192854b20ba47cf1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5

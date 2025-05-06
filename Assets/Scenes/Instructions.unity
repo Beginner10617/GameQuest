@@ -263,7 +263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Use W, A, S, D to move. ''Q'' to hit \n- "Spacebar" to jump \n- Avoid
+  m_text: '- Use W, A, S, D to move. ''H'' to hit \n- "Spacebar" to jump \n- Avoid
     the obstacles, complete the run and meet your      princess'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 79918222c5eeb494793aa554a24a5eb8, type: 2}
