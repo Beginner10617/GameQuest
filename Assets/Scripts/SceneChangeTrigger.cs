@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SceneChangeTrigger : MonoBehaviour
 {
@@ -8,15 +9,49 @@ public class SceneChangeTrigger : MonoBehaviour
     float timeReset;
     [SerializeField] private bool isDoor = false;
     [SerializeField] private AudioClip doorSound;
-    [SerializeField] private GameObject doorOpenPrompt;
+    [SerializeField] private List<GameObject> doorOpenPrompt;
     [SerializeField] private GameObject DoorObject;
     private AudioSource audioSource;
+    private InputDevice lastDevice;
 
+    InputDevice GetCurrentInputDevice()
+    {
+        foreach (var device in InputSystem.devices)
+        {
+            if (device.wasUpdatedThisFrame)
+            {
+                return device;
+            }
+        }
+        return lastDevice;
+    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if(isDoor) doorOpenPrompt.SetActive(true);
+            if (isDoor) 
+            {
+                var currentDevice = GetCurrentInputDevice();
+                if (currentDevice != lastDevice)
+                {
+                    lastDevice = currentDevice;
+
+                    if (currentDevice is Gamepad)
+                    {
+                        doorOpenPrompt[1].SetActive(true);
+
+                    }
+                    else if (currentDevice is Keyboard || currentDevice is Mouse)
+                    {
+                        doorOpenPrompt[0].SetActive(true);
+                    }
+                    else
+                    {
+                        doorOpenPrompt[0].SetActive(true);
+                    }
+                }
+                 
+            }
             if (InputManager.openDoorPressed)
             {
                 if(DoorObject != null) DoorObject.SetActive(false);
@@ -29,8 +64,14 @@ public class SceneChangeTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if(isDoor) doorOpenPrompt.SetActive(false);
-        
+            if (isDoor)
+            {
+                foreach (var d in doorOpenPrompt)
+                {
+                    d.SetActive(false);
+                }
+            }
+
             if (InputManager.openDoorPressed)
             {
                 if (DoorObject != null) DoorObject.SetActive(false);
@@ -54,7 +95,13 @@ public class SceneChangeTrigger : MonoBehaviour
         Time.timeScale = 1f; // Ensure the game is running at normal speed
         timeReset = gameTimer.currentTime;
         audioSource = GetComponent<AudioSource>();
-        if(isDoor) doorOpenPrompt.SetActive(false); // Hide the prompt at the start
+        if (isDoor)
+        {
+            foreach (var d in doorOpenPrompt)
+            {
+                d.SetActive(false);
+            }
+        }
     }
     private IEnumerator WaitForSoundAndChangeScene()
     {
