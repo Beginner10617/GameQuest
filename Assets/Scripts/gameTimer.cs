@@ -13,6 +13,7 @@ public class gameTimer : MonoBehaviour
     public static float currentTime;
     public List<GameObject> gameOverUI;
     public bool isTimerEnabled = true;
+    public string currentSceneName;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class gameTimer : MonoBehaviour
         {
             g.SetActive(false);
         }
-        
+        currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         timerText.text = currentTime.ToString();
         if(isTimerEnabled) StartCoroutine(TimerUpdater());
     }
@@ -41,6 +42,10 @@ public class gameTimer : MonoBehaviour
     {
         while(currentTime > 0f)
         {
+            if (currentSceneName != UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
+            {
+                yield break;
+            }
             timerImage.fillAmount = Mathf.InverseLerp(0, totalTime, currentTime);
             timerText.text = currentTime.ToString();
             yield return new WaitForSeconds(1f);
