@@ -1292,7 +1292,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 83dd8385b2d27414e982fa0bf9c0d114, type: 3}
   speaker:
   - Papa
-  wordSpeed: 2
+  wordSpeed: 11
   player: {fileID: 456335530}
   AutoType: 1
   autoTypeWaitTime: 2
@@ -7060,7 +7060,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: afba2c051d8edf64f966b058b0315f2f, type: 3}
   speaker:
   - Fam
-  wordSpeed: 2
+  wordSpeed: 11
   player: {fileID: 456335530}
   AutoType: 1
   autoTypeWaitTime: 2
@@ -9277,7 +9277,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 2af05e98e59270c4aafc6387759638a5, type: 3}
   speaker:
   - Baba
-  wordSpeed: 2
+  wordSpeed: 11
   player: {fileID: 456335530}
   AutoType: 1
   autoTypeWaitTime: 2
