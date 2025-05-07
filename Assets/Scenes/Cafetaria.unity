@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a80518a3d344d7eb7b087b30c68d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToIncrease: 30
+  timeToIncrease: 10
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 4746103139556742185}
   collectSound: {fileID: 8300000, guid: 260c28875fd4649f5b00b19ce3134432, type: 3}
@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a80518a3d344d7eb7b087b30c68d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToIncrease: 30
+  timeToIncrease: 10
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 4746103139556742185}
   collectSound: {fileID: 8300000, guid: 260c28875fd4649f5b00b19ce3134432, type: 3}
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   ammoSpeed: 10
   ammoLifeTime: 6
   ammoDamage: 0
-  effectSpawnPoint: {fileID: 7285784550846164076, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 4746103139556742185}
 --- !u!95 &811691082
 Animator:
   serializedVersion: 5
@@ -1816,7 +1816,7 @@ MonoBehaviour:
   ammoSpeed: 10
   ammoLifeTime: 6
   ammoDamage: 0
-  effectSpawnPoint: {fileID: 7285784550846164076, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 4746103139556742185}
 --- !u!95 &984899245
 Animator:
   serializedVersion: 5
@@ -2089,7 +2089,7 @@ MonoBehaviour:
   ammoSpeed: 10
   ammoLifeTime: 6
   ammoDamage: 0
-  effectSpawnPoint: {fileID: 7285784550846164076, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 4746103139556742185}
 --- !u!95 &1292618038
 Animator:
   serializedVersion: 5
@@ -2410,7 +2410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a80518a3d344d7eb7b087b30c68d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToIncrease: 30
+  timeToIncrease: 10
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 4746103139556742185}
   collectSound: {fileID: 8300000, guid: 260c28875fd4649f5b00b19ce3134432, type: 3}
@@ -2616,7 +2616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a80518a3d344d7eb7b087b30c68d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToIncrease: 30
+  timeToIncrease: 10
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 4746103139556742185}
   collectSound: {fileID: 8300000, guid: 260c28875fd4649f5b00b19ce3134432, type: 3}
@@ -3068,7 +3068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a80518a3d344d7eb7b087b30c68d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToIncrease: 30
+  timeToIncrease: 10
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 4746103139556742185}
   collectSound: {fileID: 8300000, guid: 260c28875fd4649f5b00b19ce3134432, type: 3}
@@ -3333,7 +3333,7 @@ MonoBehaviour:
   ammoSpeed: 10
   ammoLifeTime: 6
   ammoDamage: 0
-  effectSpawnPoint: {fileID: 7285784550846164076, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 4746103139556742185}
 --- !u!95 &1630231341
 Animator:
   serializedVersion: 5
@@ -3671,7 +3671,7 @@ MonoBehaviour:
   ammoSpeed: 10
   ammoLifeTime: 6
   ammoDamage: 0
-  effectSpawnPoint: {fileID: 7285784550846164076, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 4746103139556742185}
 --- !u!95 &1706849417
 Animator:
   serializedVersion: 5
@@ -3953,7 +3953,7 @@ MonoBehaviour:
   ammoSpeed: 10
   ammoLifeTime: 6
   ammoDamage: 0
-  effectSpawnPoint: {fileID: 7285784550846164076, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 4746103139556742185}
 --- !u!95 &1801656000
 Animator:
   serializedVersion: 5
@@ -4108,7 +4108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a80518a3d344d7eb7b087b30c68d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToIncrease: 30
+  timeToIncrease: 10
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 4746103139556742185}
   collectSound: {fileID: 8300000, guid: 260c28875fd4649f5b00b19ce3134432, type: 3}
@@ -4404,7 +4404,7 @@ MonoBehaviour:
   ammoSpeed: 10
   ammoLifeTime: 6
   ammoDamage: 0
-  effectSpawnPoint: {fileID: 7285784550846164076, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 4746103139556742185}
 --- !u!95 &1886128469
 Animator:
   serializedVersion: 5
@@ -4745,7 +4745,7 @@ MonoBehaviour:
   ammoSpeed: 10
   ammoLifeTime: 6
   ammoDamage: 0
-  effectSpawnPoint: {fileID: 7285784550846164076, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 4746103139556742185}
 --- !u!95 &1959131833
 Animator:
   serializedVersion: 5
@@ -5080,7 +5080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a80518a3d344d7eb7b087b30c68d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToIncrease: 30
+  timeToIncrease: 10
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 4746103139556742185}
   collectSound: {fileID: 8300000, guid: 260c28875fd4649f5b00b19ce3134432, type: 3}
@@ -17208,7 +17208,7 @@ MonoBehaviour:
   ammoSpeed: 10
   ammoLifeTime: 6
   ammoDamage: 0
-  effectSpawnPoint: {fileID: 7285784550846164076, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
+  effectSpawnPoint: {fileID: 4746103139556742185}
 --- !u!4 &2124937708767165169
 Transform:
   m_ObjectHideFlags: 0
@@ -34264,7 +34264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a80518a3d344d7eb7b087b30c68d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToIncrease: 30
+  timeToIncrease: 10
   decreaseEffectPrefab: {fileID: 543462005403045064, guid: ea8fe0f2e9c884aea9f37aabdd563fb8, type: 3}
   effectSpawnPoint: {fileID: 4746103139556742185}
   collectSound: {fileID: 8300000, guid: 260c28875fd4649f5b00b19ce3134432, type: 3}

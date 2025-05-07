@@ -1608,7 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d98810950b29c4e97af61740623c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 12
+  damage: 13
   range: 8.14
   colliderSize: 1.65
   _collider: {fileID: 175914481}
@@ -6595,7 +6595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d98810950b29c4e97af61740623c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 8
+  damage: 9
   range: 5.42
   colliderSize: 1.49
   _collider: {fileID: 902884206}
@@ -12961,7 +12961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d98810950b29c4e97af61740623c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 9
+  damage: 10
   range: 9.6
   colliderSize: 1.46
   _collider: {fileID: 2015131381}
