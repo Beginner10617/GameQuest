@@ -126,7 +126,7 @@ public class Interaction : MonoBehaviour
             //Debug.Log("No speaker found");
         }
         int i = index;
-        foreach (char letter in dialogue[index].ToCharArray())
+        foreach (char letter in dialogue[index])
         {
             if(istyping == false)
             {

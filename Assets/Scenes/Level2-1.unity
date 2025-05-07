@@ -21788,7 +21788,7 @@ MonoBehaviour:
   speakerImage:
   - {fileID: 2800000, guid: 3c4431309b7e547c29c0b221c754bebe, type: 3}
   speaker: []
-  wordSpeed: 10
+  wordSpeed: 11
   player: {fileID: 1713901383}
   AutoType: 1
   autoTypeWaitTime: 0
@@ -26317,7 +26317,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 3c4431309b7e547c29c0b221c754bebe, type: 3}
   - {fileID: 2800000, guid: 3c4431309b7e547c29c0b221c754bebe, type: 3}
   speaker: []
-  wordSpeed: 10
+  wordSpeed: 11
   player: {fileID: 1713901383}
   AutoType: 1
   autoTypeWaitTime: 1
@@ -29147,7 +29147,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 3c4431309b7e547c29c0b221c754bebe, type: 3}
   - {fileID: 2800000, guid: 3c4431309b7e547c29c0b221c754bebe, type: 3}
   speaker: []
-  wordSpeed: 10
+  wordSpeed: 11
   player: {fileID: 1713901383}
   AutoType: 1
   autoTypeWaitTime: 1
