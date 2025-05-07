@@ -1286,13 +1286,13 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1747617355}
   dialogueText: {fileID: 1747617354}
   dialogue:
-  - YOU WIN!!!!
-  - Go ahead .... She's waiting for you!!!
+  - "We gave you a hard time\u2026 because we love her. But you proved you do too."
+  - "Go ahead\u2026She\u2019s waiting for you!!"
   speakerImage:
   - {fileID: 2800000, guid: 83dd8385b2d27414e982fa0bf9c0d114, type: 3}
   speaker:
-  - Uncle
-  wordSpeed: 11
+  - Papa
+  wordSpeed: 2
   player: {fileID: 456335530}
   AutoType: 1
   autoTypeWaitTime: 2
@@ -7053,13 +7053,14 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1747617355}
   dialogueText: {fileID: 1747617354}
   dialogue:
-  - Sorry!!!! We are really Sorry
-  - You can please go ahead!!!!!!!!
+  - "You survived the threats, interrogations, and emotional drama- you\u2019ve earned
+    this! "
+  - Please go ahead!!
   speakerImage:
   - {fileID: 2800000, guid: afba2c051d8edf64f966b058b0315f2f, type: 3}
   speaker:
-  - Girl
-  wordSpeed: 11
+  - Fam
+  wordSpeed: 2
   player: {fileID: 456335530}
   AutoType: 1
   autoTypeWaitTime: 2
@@ -9270,13 +9271,13 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1747617355}
   dialogueText: {fileID: 1747617354}
   dialogue:
-  - I accept my defeat
-  - 'You were right.... Please go ahead!!! '
+  - 'You were right! After meeting, I ended up liking her more than I like you. '
+  - Go get her!!
   speakerImage:
   - {fileID: 2800000, guid: 2af05e98e59270c4aafc6387759638a5, type: 3}
   speaker:
-  - Uncle
-  wordSpeed: 11
+  - Baba
+  wordSpeed: 2
   player: {fileID: 456335530}
   AutoType: 1
   autoTypeWaitTime: 2

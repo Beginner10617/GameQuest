@@ -126,14 +126,14 @@ public class Interaction : MonoBehaviour
             //Debug.Log("No speaker found");
         }
         int i = index;
-        foreach (char letter in dialogue[index].ToCharArray())
+        foreach (string word in dialogue[index].Split(' '))
         {
             if(istyping == false)
             {
                 istyping = true;
                 break;
             }
-            dialogueText.text += letter;
+            dialogueText.text += word + " ";
             yield return new WaitForSeconds(1/wordSpeed);
             if (i != index)
             {
